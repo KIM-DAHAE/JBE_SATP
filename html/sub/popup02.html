@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<title>우편번호 조회 - 전라북도교육청 고등학교입학전형포털</title>
+<link rel="stylesheet" href="../../static/css/swiper.min.css">
+<link rel="stylesheet" href="../../static/css/common.css">
+<link rel="stylesheet" href="../../static/css/style.css">
+<script type="text/javascript" src="../../static/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../static/js/ui.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+<!-- popup -->
+<div class="popup-wrap">
+  <div class="popup-wrap__inner">
+    <div class="popup__cont address">
+      <div class="search-box">
+
+        <div class="form__wrap type2">
+          <div class="form__group">
+            <div class="select__wrap">
+              <label class="select__label" for="selectbox1">시도</label>
+              <select class="select__box" id="selectbox1">
+                <option class="select__item">서울</option>
+                <option class="select__item">대구</option>
+                <option class="select__item">대전</option>
+                <option class="select__item">부산</option>
+              </select>
+            </div>
+            <div class="select__wrap">
+              <label class="select__label" for="selectbox2">시군구</label>
+              <select class="select__box" id="selectbox2">
+                <option class="select__item">서울</option>
+                <option class="select__item">대구</option>
+                <option class="select__item">대전</option>
+                <option class="select__item">부산</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__group row">
+            <div class="input__wrap">
+              <div class="radio__wrap">
+                <input type="radio" class="radio__btn" id="radio1" name="group1">
+              </div>
+              <label class="input__label" for="ipt01">도로명</label>
+              <div class="input__box">
+                <input id="ipt01" type="text" placeholder="" value="">
+              </div>
+            </div>
+            <div class="input__wrap">
+              <label class="input__label" for="ipt02">건물번호</label>
+              <div class="input__box">
+                <input id="ipt02" type="text" placeholder="" value="">
+                <span class="input__dash">-</span>
+                <input type="text" placeholder="" value="">
+              </div>
+            </div>
+            <div class="input__wrap input__search">
+              <label class="input__label" for="ipt03">건물명</label>
+              <div class="input__box">
+                <input id="ipt03" type="text" placeholder="" value="">
+              </div>
+              <button type="button" class="btn__search type2 show-pc">검색</button>
+            </div>
+            <div class="input__wrap">
+              <div class="radio__wrap">
+                <input type="radio" class="radio__btn" id="radio2" name="group1">
+              </div>
+              <label class="input__label" for="ipt04">읍면동</label>
+              <div class="input__box">
+                <input id="ipt04" type="text" placeholder="" value="">
+              </div>
+            </div>
+            <div class="input__wrap">
+              <label class="input__label" for="ipt05">리</label>
+              <div class="input__box">
+                <input id="ipt05" type="text" placeholder="" value="" disabled>
+              </div>
+            </div>
+            <div class="input__wrap input__search">
+              <label class="input__label" for="ipt06">번지</label>
+              <div class="input__box">
+                <input id="ipt06" type="text" placeholder="" value="" disabled>
+                <span class="input__dash">-</span>
+                <input type="text" placeholder="" value="" disabled>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="btn__wrap search">
+          <div class="btn__inner">
+            <button class="btn">검색</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="table__group">
+        <div class="table__wrap table--col">
+          <table>
+            <caption>테이블명</caption>
+            <colgroup>
+              <col style="width: 25%;">
+              <col>
+              <col style="width: 25%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th socpe="col">우편번호</th>
+                <th socpe="col">도로명 주소</th>
+                <th socpe="col">건물상세</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- D: no data case -->
+              <tr>
+                <td colspan="3">조회된 주소가 없습니다.</td>
+              </tr>
+              <!-- // D: no data case -->
+              <tr>
+                <td>24735</td>
+                <td class="align--left">강원특별자치도 고성군 간성읍 고성중앙길</td>
+                <td>9</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="btn__wrap round show-pc">
+        <div class="btn__inner col">
+          <button class="btn border gray">닫기</button>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn__popup-close"><span class="blind">닫기</span></button>
+  </div>
+</div>
+<!-- // popup -->
+</div>
+<script>
+  
+</script>
+</body>
+</html>

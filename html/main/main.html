@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<title>main - 전라북도교육청 고등학교입학전형포털</title>
+
+
+<link rel="stylesheet" href="../../static/css/swiper.min.css">
+<link rel="stylesheet" href="../../static/css/common.css">
+<link rel="stylesheet" href="../../static/css/style.css">
+<script type="text/javascript" src="../../static/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../static/js/ui.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+<!-- header -->
+<header class="header__wrap">
+  <div class="header__top">
+    <div class="header__inner">
+      <div class="header__util">
+        <div class="util__wrap">
+          <a href="javascript:;" class="util__item home">홈으로</a>
+        </div>
+        <div class="util__wrap">
+          <a href="javascript:;" class="util__item login">로그인</a>
+          <a href="javascript:;" class="util__item portal">고입업무포털(내부업무용)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="header__inner">
+      <a href="javascript:;"><h1 class="header__logo"><span class="blind">전라북도교육청 고등학교입학전형포털</span></h1></a>
+      <button type="button" class="btn__gnb"><span class="blind">메뉴 열기</span></button>
+  
+      <!-- gnb -->
+      <nav class="gnb__wrap show-pc">
+        <ul class="gnb__wrap--depth1">
+          <li class="depth1"><a href="javascript:;">전&middot;편입학</a></li>
+          <li class="depth1"><a href="javascript:;">고교입학</a></li>
+          <li class="depth1"><a href="javascript:;">평준화배정</a></li>
+          <li class="depth1"><a href="javascript:;">맞춤서비스</a></li>
+          <li class="depth1"><a href="javascript:;">학교정보조회</a></li>
+        </ul>
+  
+        <div class="gnb__wrap--depth2">
+          <div class="depth2__inner">
+            <div class="depth2__box">
+              <strong class="depth2__title">전&middot;편입학</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">전&middot;편입학 안내</a></li>
+                <li class="depth2"><a href="javascript:;">편제확인</a></li>
+                <li class="depth2"><a href="javascript:;">학교현황</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">고교입학</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">고입안내</a></li>
+                <li class="depth2"><a href="javascript:;">입학절차</a></li>
+                <li class="depth2"><a href="javascript:;">일정및학교현황</a></li>
+                <li class="depth2"><a href="javascript:;">원서접수현황</a></li>
+                <li class="depth2"><a href="javascript:;">내신성적산출시뮬레이션</a></li>
+                <li class="depth2"><a href="javascript:;">타시도원서작성</a></li>
+                <li class="depth2"><a href="javascript:;">접수원서조회</a></li>
+                <li class="depth2"><a href="javascript:;">면접대상자조회</a></li>
+                <li class="depth2"><a href="javascript:;">시험장조회</a></li>
+                <li class="depth2"><a href="javascript:;">합격자조회</a></li>
+                <li class="depth2"><a href="javascript:;">상담사례</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">평준화배정</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">평준화배정</a></li>
+                <li class="depth2"><a href="javascript:;">안내평준화배정</a></li>
+                <li class="depth2"><a href="javascript:;">절차학군현황배정</a></li>
+                <li class="depth2"><a href="javascript:;">결과조회</a></li>
+                <li class="depth2"><a href="javascript:;">상담사례</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">맞춤서비스</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">고입전형 맞춤형 가이드</a></li>
+                <li class="depth2"><a href="javascript:;">공지사항</a></li>
+                <li class="depth2"><a href="javascript:;">자주묻는 질문</a></li>
+                <li class="depth2"><a href="javascript:;">질의응답</a></li>
+                <li class="depth2"><a href="javascript:;">자료실</a></li>
+                <li class="depth2"><a href="javascript:;">관계법령</a></li>
+                <li class="depth2"><a href="javascript:;">관련서식다운로드</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">학교정보조회</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">학교소개 정보조회 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb mobile -->
+      <aside class="gnb__wrap show-mo">
+        <div class="gnb__top">
+          <div class="header__util">
+            <div class="util__wrap">
+              <a class="util__item login">로그인</a>
+              <a class="util__item portal">고입업무포털(내부업무용)</a>
+            </div>
+          </div>
+          <button class="btn__gnb-close"><i class="ico ico__close"></i><span class="blind">메뉴 닫기</span></button>
+        </div>
+        <div class="gnb__body">
+          <ul class="gnb__wrap--depth1">
+            <li class="depth1"><a href="javascript:;">전&middot;편입학</a></li>
+            <li class="depth1"><a href="javascript:;">고교입학</a></li>
+            <li class="depth1"><a href="javascript:;">평준화배정</a></li>
+            <li class="depth1"><a href="javascript:;">맞춤서비스</a></li>
+            <li class="depth1"><a href="javascript:;">학교정보조회</a></li>
+          </ul>
+          <div class="gnb__wrap--depth2">
+            <div class="depth2__inner">
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">전&middot;편입학 안내</a></li>
+                  <li class="depth2"><a href="javascript:;">편제확인</a></li>
+                  <li class="depth2"><a href="javascript:;">학교현황</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">고입안내</a></li>
+                  <li class="depth2"><a href="javascript:;">입학절차</a></li>
+                  <!-- [Dev] 3depth 있는 case: click시 .depth2에 'is-active' class 추가 -->
+                  <li class="depth2"><a href="javascript:;">일정및학교현황</a>
+                    <button class="btn__more"><i class="ico ico__plus--blue"><span class="blind">메뉴열기</span></i></button>
+                    <div class="depth3__wrap">
+                      <ul>
+                        <li class="depth3"><a href="javascript:;">일반고(평준화)</a></li>
+                        <li class="depth3"><a href="javascript:;">일반고(비평준화)</a></li>
+                        <li class="depth3"><a href="javascript:;">특성화고</a></li>
+                        <li class="depth3"><a href="javascript:;">특목고</a></li>
+                        <li class="depth3"><a href="javascript:;">자율고</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="depth2"><a href="javascript:;">원서접수현황</a></li>
+                  <li class="depth2"><a href="javascript:;">내신성적산출시뮬레이션</a></li>
+                  <li class="depth2"><a href="javascript:;">타시도원서작성</a></li>
+                  <li class="depth2"><a href="javascript:;">접수원서조회</a></li>
+                  <li class="depth2"><a href="javascript:;">면접대상자조회</a></li>
+                  <li class="depth2"><a href="javascript:;">시험장조회</a></li>
+                  <li class="depth2"><a href="javascript:;">합격자조회</a></li>
+                  <li class="depth2"><a href="javascript:;">상담사례</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">평준화배정</a></li>
+                  <li class="depth2"><a href="javascript:;">안내평준화배정</a></li>
+                  <li class="depth2"><a href="javascript:;">절차학군현황배정</a></li>
+                  <li class="depth2"><a href="javascript:;">결과조회</a></li>
+                  <li class="depth2"><a href="javascript:;">상담사례</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">고입전형 맞춤형 가이드</a></li>
+                  <li class="depth2"><a href="javascript:;">공지사항</a></li>
+                  <li class="depth2"><a href="javascript:;">자주묻는 질문</a></li>
+                  <li class="depth2"><a href="javascript:;">질의응답</a></li>
+                  <li class="depth2"><a href="javascript:;">자료실</a></li>
+                  <li class="depth2"><a href="javascript:;">관계법령</a></li>
+                  <li class="depth2"><a href="javascript:;">관련서식다운로드</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">학교소개 정보조회 </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__bottom">
+          <ul>
+            <li class="quick-memu"><a href="javascript:;">고교입학<br/>맞춤 가이드</a></li>
+            <li class="quick-memu"><a href="javascript:;">전&middot;편입학 맞춤가이드</a></li>
+            <li class="quick-memu"><a href="javascript:;">고교 전&middot;편입학 안내</a></li>
+            <li class="quick-memu"><a href="javascript:;">고교<br/>입학안내</a></li>
+            <li class="quick-memu"><a href="javascript:;">평준화<br/>배정안내</a></li>
+          </ul>
+        </div>
+      </aside>
+      <!-- // gnb -->
+    </div>
+  </div>
+</header>
+<!-- // header -->
+
+
+
+
+<!-- Contents -->
+<main class="container" id="container">
+  <div class="contents main">
+    <!-- main swiper -->
+    <section class="component__wrap comp1">
+      <div class="component__inner wide">
+        <div class="main__swiper swiper show-pc">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="../../static/images/main/img_main_visual_swiper01.png" alt="">
+
+              <div class="text__box">
+                <div class="text__box--image"><img src="../../static/images/main/img_main_visual_img-title.png"></div>
+                <p class="text__box--small">전라북도교육청 고등학교 입학전형 포털</p>
+                <p class="text__box--large">더불어, 미래를 여는 전북교육</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../static/images/main/img_main_visual_swiper02.png" alt="">
+
+              <div class="text__box">
+                <div class="text__box--image"><img src="../../static/images/main/img_main_visual_img-title.png"></div>
+                <p class="text__box--small">전라북도교육청 고등학교 입학전형 포털</p>
+                <p class="text__box--large">더불어, 미래를 여는 전북교육</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="swiper-pagination__wrap">
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="main__swiper swiper show-mo">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="../../static/images/main/img_main_visual_swiper01_mo.png" alt="">
+              
+              <div class="text__box">
+                <div class="text__box--image"><img src="../../static/images/main/img_main_visual_img-title.png"></div>
+                <p class="text__box--small">전라북도교육청 고등학교 입학전형 포털</p>
+                <p class="text__box--large">더불어, 미래를 여는<br/>전북교육</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../static/images/main/img_main_visual_swiper02_mo.png" alt="">
+
+              <div class="text__box">
+                <div class="text__box--image"><img src="../../static/images/main/img_main_visual_img-title.png"></div>
+                <p class="text__box--small">전라북도교육청 고등학교 입학전형 포털</p>
+                <p class="text__box--large">더불어, 미래를 여는<br/>전북교육</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="swiper-pagination__wrap">
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- section2 -->
+    <section class="component__wrap comp2">
+      <div class="component__inner">
+        <div class="tab-box__wrap">
+          <div class="tab-box__left">
+            <ul class="tab-box__menu">
+              <li class="tab-box__menu--item is-active">공지사항</li>
+              <li class="tab-box__menu--item">자주묻는 질문</li>
+              <li class="tab-box__menu--item">질의응답</li>
+              <li class="tab-box__menu--item">자료실</li>
+            </ul>
+            <div class="tab-box__item is-active">
+              <div class="tab-box__item--date">
+                <p class="month">06</p>
+                <p class="day">27</p>
+              </div>
+              <div class="tab-box__item--title">
+                <div class="tab-box__item--text">
+                  2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고  추가전형 계획 안내 
+                </div>
+              </div>
+              <div class="tab-box__item--desc">
+                <p>2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고 추가전형 계획을<br class="show-pc"/>다음과 같이 안내합니다.</p>
+                <p>1. 대상: 2023년 제1회 중졸검정고시 합격자 중 평준화지역(전주,군산,익산) 일반고</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-box__right">
+            <ul>
+              <li class="tab-box__item">
+                <div class="tab-box__item--date">
+                  <p class="month">06</p>
+                  <p class="day">26</p>
+                </div>
+                <div class="tab-box__item--title">
+                  <div class="tab-box__item--text">
+                    2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고  추가전형 계획 안내 
+                  </div>
+                </div>
+                <div class="tab-box__item--desc">
+                  <p>2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고 추가전형 계획을 다음과 같이 안내합니다.</p>
+                </div>
+              </li>
+              <li class="tab-box__item">
+                <div class="tab-box__item--date">
+                  <p class="month">06</p>
+                  <p class="day">26</p>
+                </div>
+                <div class="tab-box__item--title">
+                  <div class="tab-box__item--text">
+                    2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고  추가전형 계획 안내 
+                  </div>
+                </div>
+                <div class="tab-box__item--desc">
+                  <p>2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고 추가전형 계획을 다음과 같이 안내합니다.</p>
+                </div>
+              </li>
+              <li class="tab-box__item">
+                <div class="tab-box__item--date">
+                  <p class="month">06</p>
+                  <p class="day">26</p>
+                </div>
+                <div class="tab-box__item--title">
+                  <div class="tab-box__item--text">
+                    2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고  추가전형 계획 안내 
+                  </div>
+                </div>
+                <div class="tab-box__item--desc">
+                  <p>2023학년도 제1회 중졸검정고시 합격자 평준화지역 일반고 추가전형 계획을 다음과 같이 안내합니다.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-box__more">
+            <a href="javascript:;"><span class="blind">more</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section3 -->
+    <section class="component__wrap comp3">
+      <div class="component__inner">
+        <div class="img-box__wrap swiper">
+          <ul class="img-box__list swiper-wrapper">
+            <li class="img-box__item swiper-slide"><a href="javascript:;">
+              <div class="img-box__item--image">
+                <img src="../../static/images/main/img_imgbox_image01.png" alt="">
+              </div>
+              <div class="img-box__item--text">
+                <p class="img-box__item--title"><span>고교입학 맞춤가이드</span></p>
+                <span class="img-box__item--desc">고교입학에 대한 개인형<br/>맞춤 가이드를 제공</span>
+                <i class="ico ico__plus--blue"><span class="blind">더 보기</span></i>
+              </div>
+            </a></li>
+            <li class="img-box__item swiper-slide"><a href="javascript:;">
+              <div class="img-box__item--image">
+                <img src="../../static/images/main/img_imgbox_image02.png" alt="@@alt">
+              </div>
+              <div class="img-box__item--text">
+                <p class="img-box__item--title"><span>내신성적산출 시뮬레이션</span></p>
+                <span class="img-box__item--desc">고교입학전형 내신성적 산출<br/>시뮬레이션</span>
+                <i class="ico ico__plus--blue"><span class="blind">더 보기</span></i>
+              </div>
+            </a></li>
+            <li class="img-box__item swiper-slide"><a href="javascript:;">
+              <div class="img-box__item--image">
+                <img src="../../static/images/main/img_imgbox_image03.png" alt="@@alt">
+              </div>
+              <div class="img-box__item--text">
+                <p class="img-box__item--title"><span>관련서식 다운로드</span></p>
+                <span class="img-box__item--desc">고교 전&middot;폅입학에 관한<br/>모든 서식</span>
+                <i class="ico ico__plus--blue"><span class="blind">더 보기</span></i>
+              </div>
+            </a></li>
+          </ul>
+          
+          <div class="swiper-button__wrap show-mo">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section4 -->
+    <section class="component__wrap comp4">
+      <div class="component__inner">
+        <div class="link-list__wrap">
+          <ul class="link-list__list">
+            <li class="link-list__item">
+              <p class="link-list__item--title">전&middot;편입학</p>
+              <div class="link-list__item--list">
+                <a href="javascript:;">안내</a>
+                <a href="javascript:;">학교현황</a>
+              </div>
+            </li>
+            <li class="link-list__item">
+              <p class="link-list__item--title">고교입학</p>
+              <div class="link-list__item--list">
+                <a href="javascript:;">안내</a>
+                <a href="javascript:;">절차</a>
+                <a href="javascript:;">전형일정</a>
+                <a href="javascript:;">원서작성</a>
+              </div>
+            </li>
+            <li class="link-list__item">
+              <p class="link-list__item--title">평준화배정</p>
+              <div class="link-list__item--list">
+                <a href="javascript:;">안내</a>
+                <a href="javascript:;">절차</a>
+                <a href="javascript:;">학군현황</a>
+                <a href="javascript:;">배정결과조회</a>
+              </div>
+            </li>
+            <li class="link-list__item">
+              <p class="link-list__item--title">학교현황</p>
+              <div class="link-list__item--list">
+                <a href="javascript:;">일반고 (평준화)</a>
+                <a href="javascript:;">일반고 (비평준화)</a>
+                <a href="javascript:;">특성화고</a>
+                <a href="javascript:;">특목고</a>
+                <a href="javascript:;">학교현황</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- section5 -->
+    <section class="component__wrap comp5">
+      <div class="component__inner">
+        <div class="quick-menu__wrap">
+          <ul class="quick-menu__list">
+            <li class="quick-menu__item">
+              <a href="javascript:;">
+                <div class="quick-menu__item--icon">
+                  <i class="ico__quick-menu ico1"></i>
+                </div>
+                <p class="quick-menu__item--title"><span>타시도원서작성</span></p>
+              </a>
+            </li>
+            <li class="quick-menu__item">
+              <a href="javascript:;">
+                <div class="quick-menu__item--icon">
+                  <i class="ico__quick-menu ico2"></i>
+                </div>
+                <p class="quick-menu__item--title"><span>면접대상자조회</span></p>
+              </a>
+            </li>
+            <li class="quick-menu__item">
+              <a href="javascript:;">
+                <div class="quick-menu__item--icon">
+                  <i class="ico__quick-menu ico3"></i>
+                </div>
+                <p class="quick-menu__item--title"><span>시험장조회</span></p>
+              </a>
+            </li>
+            <li class="quick-menu__item">
+              <a href="javascript:;">
+                <div class="quick-menu__item--icon">
+                  <i class="ico__quick-menu ico4"></i>
+                </div>
+                <p class="quick-menu__item--title"><span>합격자조회</span></p>
+              </a>
+            </li>
+            <li class="quick-menu__item">
+              <a href="javascript:;">
+                <div class="quick-menu__item--icon">
+                  <i class="ico__quick-menu ico5"></i>
+                </div>
+                <p class="quick-menu__item--title"><span>배정결과조회</span></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- floating menu -->
+    <aside class="floating-menu">
+      <ul class="floating-menu__list">
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="javascript:;">
+            고교입학 <br />
+            맞춤 가이드
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="javascript:;">
+            전&middot;편입학 <br />
+            맞춤가이드
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="javascript:;">
+            고교 전&middot;편입학 <br />
+            안내
+          </a>
+        </li>
+        <li class="floating-menu__item">
+            <a class="floating-menu__link" href="javascript:;">
+            고교 <br />
+            입학안내
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="javascript:;">
+            평준화 <br />
+            배정안내
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <button class="movetotop" class="button">
+            <span class="blind">상단 이동</span>
+          </button>
+        </li>
+      </ul>
+
+      <button class="movetotop" class="button">
+        <span class="blind">상단 이동</span>
+      </button>
+    </aside>
+    <!-- // floating menu -->
+  </div>
+</main>
+<!-- // Contents -->
+
+
+
+
+
+<!-- footer -->
+<footer class="footer__wrap">
+  <div class="footer__top">
+    <div class="footer__inner">
+      <div class="footer__policy">
+        <ul class="policy__list">
+          <li class="policy__item"><a href="javascript:;">개인정보처리방침</a></li>
+          <li class="policy__item"><a href="javascript:;">전화번호안내</a></li>
+          <li class="policy__item"><a href="javascript:;">홈페이지이용약관</a></li>
+          <li class="policy__item"><a href="javascript:;">이메일 무단수집거부</a></li>
+          <li class="policy__item"><a href="javascript:;">저작권안내</a></li>
+          <li class="policy__item"><a href="javascript:;">원격지원</a></li>
+        </ul>
+        <div class="footer__site-map">
+          <button type="button" class="site-map__btn">
+            관련사이트 바로가기
+            <i class="ico ico__arr-up--white"></i>
+          </button>
+          <ul class="site-map__list">
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option01</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option02</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option03</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option04</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option05</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__inner">
+      <h2 class="footer__logo"><a href="#"><img src="../../static/images/common/img_footer_logo.png" alt="전라북도교육청 logo"></a></h2>
+      <div class="footer__copy">
+        <div class="copy__title">전라북도교육청 고등학교입학전형포털</div>
+        <ul class="copy__list">
+          <li class="copy__item">(55065) 전라북도 전주시 완산구 홍산로 111 전라북도교육청</li>
+          <li class="copy__item">TEL. 063)239-3339</li>
+          <li class="copy__item">FAX. 063)220-9407</li>
+        </ul>
+        <strong class="copy__copyright">
+          COPYRIGHT(C)2023.JEOLLABUKDO OFFICE OF EDUCATION. ALL RIGHTS RESERVED.
+        </strong>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- // footer -->
+</div>
+
+<!-- dimm -->
+<div class="dimm"></div>
+
+<!-- popup -->
+<div class="popup__wrap"></div>
+
+<script>
+  const swiperMain = new Swiper('.swiper.main__swiper', {
+    loop: true,
+    clickable: true,
+
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
+  /* 230720: mian 하단 썸네일 목록 swiper 기능 */
+  
+  let ww = window.innerWidth;
+  let swiperImgbox = undefined;
+
+  function initSwiper() {
+    if (ww < 641 && swiperImgbox === undefined) {
+      swiperImgbox = new Swiper(".swiper.img-box__wrap", {
+        slidesPerView: 1,
+        spaceBetween: 4,
+        clickable: true,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    } else if (ww >= 641 && swiperImgbox !== undefined) {
+      swiperImgbox.destroy();
+      swiperImgbox = undefined;
+    }
+  }
+
+  initSwiper();
+
+  window.addEventListener('resize', function () {
+    ww = window.innerWidth;
+    initSwiper();
+  });
+
+  /* // 230720: mian 하단 썸네일 목록 swiper 기능 */
+
+</script>
+</body>
+</html>

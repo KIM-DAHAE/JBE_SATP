@@ -1,0 +1,52 @@
+
+/********** RESET ***********/
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {all:unset; display:revert;}
+*:focus {outline:auto;}
+*, *::before, *::after {box-sizing:border-box;}
+// *::-webkit-scrollbar {display:none;}
+ol, ul, menu {list-style:none;}
+img {max-width:100%;}
+table {border-collapse:collapse; width: 100%;}
+caption {visibility: hidden; overflow: hidden; width: 0; height: 0; line-height: 0}
+textarea {white-space:revert; resize:none;}
+strong, em {display:block; font-weight: normal; font-style: normal;}
+input
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+// input[type='radio'],
+// input[type='radio']:checked {appearance: none; display: none;}
+meter {-webkit-appearance:revert; appearance:revert;}
+::placeholder {color:unset;}
+a,button {display: block; cursor: pointer;}
+.link {color: #3976f1; text-decoration: underline; text-underline-offset: 2px; word-break: break-all;}
+.blind{visibility:hidden; overflow:hidden; position:absolute; top:0; left:0; width:0; height:0; font-size:0; line-height:0;}
+
+.show-mo {display: none !important;}
+.show-pc {display: block !important;}
+table.show-pc {display: table !important;}
+
+.pointBlue {color:#3976f1 !important;}
+.pointRed {color:#ff404e !important;}
+.blank {color: #d8dce0 !important;}
+.bg {background: #f6f8fb !important;}
+.regular {font-weight: 400 !important;}
+.medium {font-weight: 500 !important;}
+.bold {font-weight: 700 !important;}
+.left{text-align: left !important; justify-content: flex-start !important;}
+.right {text-align: right !important; justify-content: flex-end !important;}
+.center {text-align: center !important; justify-content: center !important;}
+
+// tablet
+@media screen and (min-width: 641px) and (max-width: 1919px){
+    .link {text-underline-offset: vw-pc(2);}
+
+}
+// mobile
+@media screen and (max-width: 640px) {
+    .show-pc {display: none !important;}
+    .show-mo {display: block !important;}
+    table.show-pc {display: none !important;}
+    table.show-mo {display: table !important;}
+
+    .link {text-underline-offset: vw-mo(2);}
+}

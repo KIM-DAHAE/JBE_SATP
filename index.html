@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Publishing List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+body, h1, p {margin:0; font-family: 'Nanum Gothic';}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+h1 {padding:2%; color:#333; background:#ccc;}
+.publ-list {padding:1% 2% 2%;}
+.conversion {display:flex; align-items:center; gap:1.3%; padding:1% 2%; font-size:14px; border-bottom:1px dotted #333;}
+.conversion .h-total {margin-right:auto; font-weight:bold;}
+.conversion .h-ing span {color:#ca1b1b;}
+.conversion .h-complete span {color:#2026d7;}
+.conversion .data span {font-weight:bold;;}
+table + table {margin-top:10px;}
+table th {font-weight:normal;}
+.publ-list table {width:100%; font-size:13px; text-align:center; border-collapse:collapse; border-spacing:0;}
+.publ-list table tr:hover {background:rgba(194, 168, 228, 0.2);}
+.publ-list table th {padding:8px 0; border:solid 1px #ccc; background:#dfdfdf; vertical-align:middle;}
+.publ-list table td {padding:6px; border:solid 1px #ccc; vertical-align:middle;}
+.publ-list table td:last-child {padding-left:8px; text-align:left; line-height: 1.3;}
+.publ-list table tr.title:hover {background: none;}
+.publ-list table tr.title th {color:#333; font-size:18px; font-weight: 600; text-align:left; border:0; background: none;}
+.publ-list table tr.title .total {font-size:14px; text-align:right;}
+.lastmdate {color: #1155CC;}
+.stand_by {color:#333;}
+table .ing {color:#ca1b1b;}
+table .end {color:#2026d7;}
+table .none {color:#ddd;text-decoration: line-through;}
+.publ-list table td.link,
+.publ-list table td.tit,
+.publ-list table td.page,
+.publ-list table td.etc{text-align:left; text-indent:4px;}
+.indicator {overflow:hidden; position:fixed; top:30%; left:5px; width:0; margin:0; padding-left:30px; color:#fff; border-radius: 8px; background: rgba(0, 0, 0, .8);}
+.indicator li {margin: 20px 0; font-weight:bold; white-space: nowrap;}
+.indicator a {color: #fff !important;}
+.indicator:hover {width:auto; padding-right: 30px;}
+</style>
+</head>
+<body>
+<!-- eniter wrap -->
+<div class="guide-wrap">
+	<div class="header">
+		<h1>전라북도교육청 고등학교입학전형포털</h1>
+		<div class="conversion">
+			<p class="h-total">전체: <span class="data"></span></p>
+			<p class="h-wait">대기: <span class="data"></span></p>
+			<p class="h-ing">진행: <span class="data"></span></p>
+			<p class="h-complete">완료: <span class="data"></span></p>
+		</div>
+	</div>
+	<div class="publ-list">	
+		<!-- GUIDE -->
+		<table class="codinglist" id="guide">
+			<colgroup>
+				<col width="2%" />
+				<col width="*" />
+				<col width="5%" />
+				<col width="10%" />
+				<col width="20%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="20%" />
+			</colgroup>
+			<thead>
+				<tr class="title"><th colspan="7">GUIDE</th></tr>
+				<tr><th>no.</th><th>메뉴명</th><th>속성</th><th>pageID</th><th>url</th><th>진행상황</th><th>담당자</th><th>완료날짜</th><th>비고</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">common</td>
+					<td>Page</td>
+					<td class="page"></td>
+					<td class="link"><a href="html/@guide/common.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+			
+		<!-- main -->
+		<table class="codinglist" id="main">
+			<colgroup>
+				<col width="2%" />
+				<col width="*" />
+				<col width="5%" />
+				<col width="10%" />
+				<col width="20%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="20%" />
+			</colgroup>
+			<thead>
+				<tr class="title"><th colspan="7">Common</th></tr>
+				<tr><th>no.</th><th>메뉴명</th><th>속성</th><th>pageID</th><th>url</th><th>진행상황</th><th>담당자</th><th>완료날짜</th><th>비고</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">header / gnb</td>
+					<td>Page</td>
+					<td class="page">common</td>
+					<td class="link"><a href="html/@guide/header.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">footer</td>
+					<td>Page</td>
+					<td class="page">common</td>
+					<td class="link"><a href="html/@guide/footer.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">popup</td>
+					<td>Page</td>
+					<td class="page">common</td>
+					<td class="link"><a href="html/sub/popup.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-26</td>
+					<td>230726 신규 추가 화면</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- main -->
+		<table class="codinglist" id="main">
+			<colgroup>
+				<col width="2%" />
+				<col width="*" />
+				<col width="5%" />
+				<col width="10%" />
+				<col width="20%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="20%" />
+			</colgroup>
+			<thead>
+				<tr class="title"><th colspan="7">Main page</th></tr>
+				<tr><th>no.</th><th>메뉴명</th><th>속성</th><th>pageID</th><th>url</th><th>진행상황</th><th>담당자</th><th>완료날짜</th><th>비고</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">main page</td>
+					<td>Page</td>
+					<td class="page">main</td>
+					<td class="link"><a href="html/main/main.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-11</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<!-- sub -->
+		<table class="codinglist" id="sub">
+			<colgroup>
+				<col width="2%" />
+				<col width="*" />
+				<col width="5%" />
+				<col width="10%" />
+				<col width="20%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="5%" />
+				<col width="20%" />
+			</colgroup>
+			<thead>
+				<tr class="title"><th colspan="7">Sub page</th></tr>
+				<tr><th>no.</th><th>메뉴명</th><th>속성</th><th>pageID</th><th>url</th><th>진행상황</th><th>담당자</th><th>완료날짜</th><th>비고</th></tr>
+			</thead>
+			<tbody>
+
+				<!-- 전·편입학 -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">전&middot;편입학 > 전&middot;편입학 안내</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub01_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>손주혜</td>
+					<td class="date">23-07-13</td>
+					<td>
+						230714: page__contents 클래스명 및 footer 수정<br/>
+						230717: btn__wrap 버튼 전체 수정<br>
+						230718: 지역별 교육지원청 문의처 테이블 클래스 추가
+						230719: 한문 폰트 적용으로 수정
+					</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">전&middot;편입학 > 편제확인</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-13</td>
+					<td>sub05_01화면과 동일</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">전&middot;편입학 > 학교현황</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub01_03.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김바로</td>
+					<td class="date">23-07-18</td>
+					<td></td>
+				</tr>
+				<!-- // 전·편입학 -->
+
+
+				<!-- 고교입학 -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 고입 안내</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-11</td>
+					<td>
+						230721: tab 별 컨텐츠 추가 작업<br>
+					</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 입학절차</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 일정 및 학교 현황</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_03.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김민국</td>
+					<td class="date">23-07-18</td>
+					<td></span></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 일정 및 원서접수현황</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-13</td>
+					<td>sub05_01화면과 동일</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 내신성적산출 시뮬레이션</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_05.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 타시도 원서작성 목록</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_06_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 타시도 원서작성 입력</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_06_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-19</td>
+					<td>작업완료<br>
+							지망정보 탭에 학군내 대상학교, 지망학교 디자인으로는 정확한 기능을 확인하기 어렵습니다.
+					</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 접수원서 조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_07.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 접수원서 조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_07_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-26</td>
+					<td>
+						230726 신규 추가 화면<br>
+					</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 면접대상자 조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#none" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 시험장 조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#none" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 합격자 조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#none" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">고교입학 > 상담사례</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub02_11.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-18</td>
+					<td></td>
+				</tr>
+				<!-- // 고교입학 -->
+				
+				
+				<!-- 평준화배정 -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">평준화배정 > 평준화배정 안내</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub03_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>손주혜</td>
+					<td class="date">23-07-18</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">평준화배정 > 평준화배정 절차</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub03_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">평준화배정 > 학군현황</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-18</td>
+					<td>sub01_03화면과 동일</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">평준화배정 > 배정결과조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#none" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">평준화배정 > 상담사례</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-18</td>
+					<td>sub02_11화면과 동일</td>
+				</tr>
+				<!-- // 평준화배정 -->
+
+
+				<!-- 맞춤서비스 -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 고입전형 맞춤형 가이드</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub04_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-13</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 공지사항</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-13</td>
+					<td>sub05_01화면과 동일</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 공지사항 > 상세</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub04_02_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 자주묻는 질문</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-13</td>
+					<td>sub05_01화면과 동일</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 질의응답</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-13</td>
+					<td>sub05_01화면과 동일</td>
+				</tr>
+				<tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 질의응답 > 작성</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub04_04_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-21</td>
+					<td>
+						230721 신규 추가 화면
+					</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 자료실</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date">23-07-13</td>
+					<td>sub05_01화면과 동일</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 관계법령</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub04_06.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김민국</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">맞춤서비스 > 관련서식 다운로드</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub04_07.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<!-- // 맞춤서비스 -->
+				
+				
+				
+				<!-- 학교정보조회 -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">학교정보조회 > 학교정보조회</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub05_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-13</td>
+					<td>
+						230719: btn__searh에 class 추가
+					</td>
+				</tr>
+				<!-- // 학교정보조회 -->
+
+
+
+				<!-- 이용안내 -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 사이트맵</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub06_01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 로그인</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub06_02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김소영</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 개인정보처리방침</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="#none" target="_blank"></a></td>
+					<td class="state"></td>
+					<td></td>
+					<td class="date"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 전화번호안내</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub06_04.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>손주혜</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 홈페이지이용약관</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub06_05.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>손주혜</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 이메일무단수집거부</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub06_06.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>손주혜</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">이용안내 > 저작권정책</td>
+					<td>Page</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/sub06_07.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>손주혜</td>
+					<td class="date">23-07-19</td>
+					<td></td>
+				</tr>
+				<!-- // 이용안내 -->
+
+
+				<!-- popup -->
+				<tr>
+					<td class="no"></td>
+					<td class="tit">Popup > 개인정보 활용 동의서(안)</td>
+					<td>Popup</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/popup01.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-26</td>
+					<td>230726 신규 추가 화면</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">Popup > 우편번호 검색</td>
+					<td>Popup</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/popup02.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-26</td>
+					<td>230726 신규 추가 화면</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">Popup > 학교찾기</td>
+					<td>Popup</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/popup03.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-26</td>
+					<td>230726 신규 추가 화면</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="tit">Popup > 합격증</td>
+					<td>Popup</td>
+					<td class="page">sub</td>
+					<td class="link"><a href="html/sub/popup04.html" target="_blank"></a></td>
+					<td class="state"></td>
+					<td>김다해</td>
+					<td class="date">23-07-26</td>
+					<td>230726 신규 추가 화면</td>
+				</tr>
+				<!-- // popup -->
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+function chkList(){
+	$(".codinglist tr").each(function() {
+		var index = $(".codinglist tr").not('.title').index(this);
+		$(this).children(".codinglist td.no").text(index);
+	});
+
+	var total = $(".no").length;
+	var complete= 0;
+
+	$(".codinglist td a").each(function() {
+		if($(this).attr('href') != '#'){
+			$(this).parent().parent().find('.state').text('작업중').addClass('ing').removeClass('wait');
+			var alink = $(this).attr('href');
+			$(this).text(alink);
+		} else
+		if ($(this).attr('href') == '#') {
+			$(this).parent().parent().find('.state').text('대기중').addClass('wait');
+		}
+		if ($(this).attr('href') == '#none') {
+			$(this).parent().parent().find('.state').text('비대상').removeClass('ing').addClass('none');
+			$(this).text("");
+		}
+	});
+	$(".codinglist td.date").each(function() {
+		if($(this).text().length > 0) {
+			complete++;
+			$(this).parent().find('.state').text('완료');
+			$(this).parent().find('.state').addClass('end').removeClass('ing').removeClass('wait');
+		}
+	});
+
+	if($('.state').hasClass('ing')){
+		$(this).text('진행중')
+	}
+
+	$(".codinglist td.state").each(function() {
+		if($(this).hasClass('end') === true) {
+			$(this).parent().css('background', 'rgba(32, 38, 215, .08)');
+		}
+	});
+
+	var ing = $('.ing').length;
+	var wait = Math.floor(total - ing - complete);
+
+	$('.h-total .data').html('<span>' + total + '</span>건');
+	$('.h-complete .data').html('<span>' + complete + '</span>건(' + Math.round((complete/total)*100) + '%)');
+	$('.h-ing .data').html('<span>' + ing + '</span>건(' + Math.round((ing/total)*100) + '%)');
+	$('.h-wait .data').html('<span>' + wait + '</span>건(' + Math.round((wait/total)*100) + '%)');
+}
+chkList();
+</script>
+</body>
+</html>

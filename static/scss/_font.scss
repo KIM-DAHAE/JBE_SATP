@@ -1,0 +1,338 @@
+/***** font *****/
+@import "_color.scss";
+
+@font-face {
+	font-family:'NanumSquare';
+	font-weight:300; // Light
+	src: url('../fonts/NanumSquareL.otf') format('opentype'),
+		 url('../fonts/NanumSquareL.woff') format('woff'),
+		 url('../fonts/NanumSquareL.woff2') format('woff2'),
+		 url('../fonts/NanumSquareL.eot') format('eot');
+}
+@font-face {
+	font-family:'NanumSquare';
+	font-weight:400; // Regular
+	src: url('../fonts/NanumSquareR.otf') format('opentype'),
+			 url('../fonts/NanumSquareR.woff') format('woff'),
+			 url('../fonts/NanumSquareR.woff2') format('woff2'),
+			 url('../fonts/NanumSquareR.eot') format('eot');
+}
+@font-face {
+	font-family:'NanumSquare';
+	font-weight:700; // Bold
+	src: url('../fonts/NanumSquareB.otf') format('opentype'),
+		 url('../fonts/NanumSquareB.woff') format('woff'),
+		 url('../fonts/NanumSquareB.woff2') format('woff2'),
+		 url('../fonts/NanumSquareB.eot') format('eot');
+}
+@font-face {
+	font-family:'NanumSquare';
+	font-weight:800; // Extra bold
+	src: url('../fonts/NanumSquareEB.otf') format('opentype'),
+		 url('../fonts/NanumSquareEB.woff') format('woff'),
+		 url('../fonts/NanumSquareEB.woff2') format('woff2'),
+		 url('../fonts/NanumSquareEB.eot') format('eot');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: url('../fonts/Pretendard-Light.woff') format('woff');
+}
+
+
+
+
+.weight--bold {
+	font-weight: 700;
+}
+.weight--exbold {
+	font-weight: 800;
+}
+
+.ch {
+  font-family: sans-serif;
+}
+
+[class*="highlight"] {
+	display: inline;
+	padding: 0 10px 0 4px;
+}
+.highlight {
+	&--blue {
+		padding-right: 8px;
+		color: $primary;
+		box-shadow: inset 0 -10px 0 $skyblue;
+	}
+	&--red { // 임시임 나중에 필요한 색이나 뭘로 수정해야함
+		padding-right: 8px;
+		color: #de3131;
+		box-shadow: inset 0 -10px 0 #ffe2e2;
+	}
+}
+
+
+// bullet
+[class^='bullet__list'] {
+  li {
+		position: relative;
+		word-break: break-all;
+		padding-left: 6px;
+
+    & + li {
+      margin-top: 8px;
+    }
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			background: $black;
+		}
+
+		[class^='bullet__list'] {
+			margin-top: 10px;
+		}
+  }
+}
+.bullet__list {
+  &--dot {
+    > li {
+      &:before {
+        top: 10px;
+        width: 3px;
+        height: 3px;
+				border-radius: 50%;
+      }
+    }
+  }
+  &--dash {
+    > li {
+			padding-left: 12px;
+      &:before {
+        top: 11px;
+        width: 7px;
+        height: 1px;
+      }
+    }
+  }
+  &--star {
+    > li {
+			padding-left: 12px;
+      &:before {
+				content: '*';
+        top: 4px;
+				font-size: 14px;
+				background: none;
+      }
+    }
+  }
+  &--ref {
+    > li {
+			display: flex;
+			align-items: flex-start;
+			gap: 4px;
+			padding: 0;
+      &:before {
+				content: '※';
+				position: static;
+				font-size: 14px;
+				background: none;
+      }
+    }
+  }
+  &--num {
+    > li {
+			display: flex;
+			gap: 3px;
+			padding-left: 0;
+			background: none;
+      &:before {
+				display: none;
+			}
+    }
+  }
+}
+
+// tablet
+@media screen and (min-width: 641px) and (max-width: 1919px){
+	[class*="highlight"] {
+		padding:  vw-pc(10 0 0 4);
+	}
+	.highlight {
+		&--blue {
+			padding-right: vw-pc(8);
+			box-shadow: inset 0 vw-pc(-10) 0 $skyblue;
+		}
+		&--red { // 임시임 나중에 필요한 색이나 뭘로 수정해야함
+			padding-right: vw-pc(8);
+			box-shadow: inset 0 vw-pc(-10) 0 #ffe2e2;
+		}
+	}
+	
+	// bullet
+	[class^='bullet__list'] {
+		li {
+			padding-left: vw-pc(6);
+	
+			& + li {
+				margin-top: vw-pc(8);
+			}
+	
+			&:before {
+			}
+
+			[class^='bullet__list'] {
+				margin-top: vw-pc(10);
+			}
+		}
+	}
+	.bullet__list {
+		&--dot {
+			> li {
+				&:before {
+					top: vw-pc(10);
+					width: vw-pc(3);
+					height: vw-pc(3);
+				}
+			}
+		}
+		&--dash {
+			> li {
+				padding-left: vw-pc(12);
+				&:before {
+					top: vw-pc(11);
+					width: vw-pc(7);
+					height: vw-pc(1);
+				}
+			}
+		}
+		&--star {
+			> li {
+				padding-left: vw-pc(12);
+				&:before {
+					top: vw-pc(3);
+					font-size: vw-pc(14);
+				}
+			}
+		}
+		&--ref {
+			> li {
+				gap: vw-pc(4);
+				padding-left: 0;
+				&:before {
+					font-size: vw-pc(14);
+				}
+			}
+		}
+		&--num {
+			> li {
+				gap: vw-pc(4);
+				padding-left: 0;
+				&:before {
+				}
+			}
+		}
+	}
+}
+// mobile
+@media screen and (max-width: 640px) {
+	[class*="highlight"] {
+		padding:  vw-mo(0 8  0 7);
+	}
+	.highlight {
+		&--blue {
+			padding-right: vw-mo(10);
+			box-shadow: inset 0 vw-mo(-12) 0 $skyblue;
+		}
+		&--red { // 임시임 나중에 필요한 색이나 뭘로 수정해야함
+			padding-right: vw-mo(10);
+			box-shadow: inset 0 vw-mo(-10) 0 #ffe2e2;
+		}
+	}
+	
+	// bullet
+	[class^='bullet__list'] {
+		li {
+			padding-left: vw-mo(6);
+	
+			& + li {
+				margin-top: vw-mo(8);
+			}
+	
+			&:before {
+			}
+
+			[class^='bullet__list'] {
+				margin-top: vw-mo(10);
+			}
+		}
+	}
+	.bullet__list {
+		&--dot {
+			> li {
+				&:before {
+					top: vw-mo(10);
+					width: vw-mo(2);
+					height: vw-mo(2);
+				}
+			}
+		}
+		&--dash {
+			> li {
+				padding-left: vw-mo(12);
+				&:before {
+					top: vw-mo(11);
+					width: vw-mo(8);
+					height: vw-mo(1);
+				}
+			}
+		}
+		&--star {
+			> li {
+				padding-left: vw-mo(12);
+				&:before {
+					top: vw-mo(4);
+					font-size: vw-mo(14);
+				}
+			}
+		}
+		&--ref {
+			> li {
+				padding-left: 0;
+				font-size: vw-mo(18);
+				&:before {
+					margin-top: vw-mo(3);
+					font-size: vw-mo(15);
+				}
+			}
+		}
+		&--num {
+			> li {
+				gap: vw-mo(3);
+				padding-left: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<title>고교입학 - 전라북도교육청 고등학교입학전형포털</title>
+<link rel="stylesheet" href="../../static/css/swiper.min.css">
+<link rel="stylesheet" href="../../static/css/common.css">
+<link rel="stylesheet" href="../../static/css/style.css">
+<script type="text/javascript" src="../../static/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../static/js/ui.js"></script>
+<script type="text/javascript">
+
+function list(pg){
+    var myform = eval("document.myform");
+    myform.pg.value = pg;
+    myform.action = "./JbdMs04.do";
+    myform.submit();
+}
+
+function board_view(sb){
+    var myform  = eval("document.myform");
+    myform.sb.value = sb;
+    myform.pg.value = 1;
+
+    myform.action = "./JbdMs04_s1.do";
+    myform.submit();
+}
+
+function JS_Search(){
+    var myform = eval("document.myform");
+
+    myform.action = "./JbdMs04.do";
+    myform.submit();
+}
+
+</script>
+</head>
+
+<body>
+<div class="wrap">
+<!-- header -->
+
+
+
+
+
+
+<header class="header__wrap">
+  <div class="header__top">
+    <div class="header__inner">
+      <div class="header__util">
+        <div class="util__wrap">
+          <a class="util__item home" href="/">홈으로</a>
+        </div>
+        <div class="util__wrap">
+          
+					
+					
+					<a class="util__item login" href="/jbd/member/logoutprc.do">로그아웃</a>
+					
+					
+          
+          <a class="util__item portal" >고입업무포털(내부업무용)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="header__inner">
+      <a href="/"><h1 class="header__logo"><span class="blind">전라북도교육청 고등학교입학전형포털</span></h1></a>
+      <button type="button" class="btn__gnb"><span class="blind">메뉴 열기</span></button>
+  
+      <!-- gnb -->
+      <nav class="gnb__wrap show-pc">
+        <ul class="gnb__wrap--depth1">
+          <li class="depth1"><a href="/jbd/jp/JbdJp00_s0.do">전·편입학</a></li>
+          <li class="depth1"><a href="/jbd/ip/JbdIp00_s1.do">고교입학</a></li>
+          <li class="depth1"><a href="/jbd/bj/JbdBj00.do">평준화배정</a></li>
+          <li class="depth1"><a href="/jbd/ms/JbdMs00_jh.do">맞춤서비스</a></li>
+          <li class="depth1"><a href="/jbd/hg/JbdHg00.do">학교정보조회</a></li>
+        </ul>
+  
+        <div class="gnb__wrap--depth2">
+          <div class="depth2__inner">
+            <div class="depth2__box">
+              <strong class="depth2__title">전·편입학</strong>
+              <ul>
+                <li class="depth2"><a href="/jbd/jp/JbdJp00_s0.do">전·편입학 안내</a></li>
+                <li class="depth2"><a href="/jbd/jp/JbdJp02_s1.do">편제확인</a></li>
+                <li class="depth2"><a href="/jbd/jp/JbdJp03_s1.do">학교현황</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">고교입학</strong>
+              <ul>
+                <li class="depth2"><a href="/jbd/ip/JbdIp00_s1.do">고입안내</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp01.do">입학절차</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp02_a_s1.do">일정및학교현황</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp03.do">원서접수현황</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp04.do">내신성적산출시뮬레이션</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp05.do">타시도원서작성</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp06.do">접수원서조회</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp10.do">면접대상자조회</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp07.do">시험장조회</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp08.do">합격자조회</a></li>
+                <li class="depth2"><a href="/jbd/ip/JbdIp09.do">상담사례</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">평준화배정</strong>
+              <ul>
+                <li class="depth2"><a href="/jbd/bj/JbdBj00.do">평준화배정 안내</a></li>
+                <li class="depth2"><a href="/jbd/bj/JbdBj01.do">평준화배정 절차</a></li>
+                <li class="depth2"><a href="/jbd/bj/JbdBj02.do">학군현황</a></li>
+                <li class="depth2"><a href="/jbd/bj/JbdBj03.do">배정결과조회</a></li>
+                <li class="depth2"><a href="/jbd/bj/JbdBj04.do">상담사례</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">맞춤서비스</strong>
+              <ul>
+                <li class="depth2"><a href="/jbd/ms/JbdMs00_jh.do">고입전형 맞춤형 가이드</a></li>
+                <li class="depth2"><a href="/jbd/ms/JbdMs01.do">공지사항</a></li>
+                <li class="depth2"><a href="/jbd/ms/JbdMs02.do">자주묻는 질문</a></li>
+                <li class="depth2"><a href="/jbd/ms/JbdMs03.do">질의응답</a></li>
+                <li class="depth2"><a href="/jbd/ms/JbdMs04.do">자료실</a></li>
+                <li class="depth2"><a href="/jbd/ms/JbdMs06.do">관계법령</a></li>
+                <li class="depth2"><a href="/jbd/ms/JbdMs07.do">관련서식다운로드</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">학교정보조회</strong>
+              <ul>
+                <li class="depth2"><a href="/jbd/hg/JbdHg00.do">학교소개 정보조회 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- // gnb -->
+      <aside class="gnb__wrap show-mo">
+        <div class="gnb__top">
+          <div class="header__util">
+            <div class="util__wrap">
+              
+			          
+			          
+			          <a class="util__item login" href="/jbd/member/logoutprc.do">로그아웃</a>
+			          
+		          
+            </div>
+          </div>
+          <button class="btn__gnb-close"><i class="ico ico__close"></i><span class="blind">메뉴 닫기</span></button>
+        </div>
+        <div class="gnb__body">
+          <ul class="gnb__wrap--depth1">
+            <li class="depth1"><a href="#">전&middot;편입학</a></li>
+            <li class="depth1"><a href="#">고교입학</a></li>
+            <li class="depth1"><a href="#">평준화배정</a></li>
+            <li class="depth1"><a href="#">맞춤서비스</a></li>
+            <li class="depth1"><a href="#">학교정보조회</a></li>
+          </ul>
+          <div class="gnb__wrap--depth2">
+            <div class="depth2__inner">
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="/jbd/jp/JbdJp00_s0.do">전&middot;편입학 안내</a></li>
+                  <li class="depth2"><a href="/jbd/jp/JbdJp02_s1.do">편제확인</a></li>
+                  <li class="depth2"><a href="/jbd/jp/JbdJp03_s1.do">학교현황</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <!-- [Dev] 3depth 있는 case: click시 .depth2에 'is-active' class 추가 -->
+                  <li class="depth2"><a href="/jbd/ip/JbdIp00_s1.do">고입안내</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp01.do">입학절차</a></li>
+                  <li class="depth2"><a href="#">일정및학교현황</a>
+                    <button class="btn__more"><i class="ico ico__plus--blue"><span class="blind">메뉴열기</span></i></button>
+                    <div class="depth3__wrap">
+                      <ul>
+                        <li class="depth3"><a href="/jbd/jp/JbdJp03_s1.do?hs_jy_gb=20">일반고(평준화)</a></li>
+                        <li class="depth3"><a href="/jbd/jp/JbdJp03_s1.do?hs_jy_gb=30">일반고(비평준화)</a></li>
+                        <li class="depth3"><a href="/jbd/jp/JbdJp03_s1.do?hs_jy_gb=10">특성화고</a></li>
+                        <li class="depth3"><a href="/jbd/jp/JbdJp03_s1.do?hs_jy_gb=50">특목고</a></li>
+                        <li class="depth3"><a href="/jbd/jp/JbdJp03_s1.do?hs_jy_gb=40">자율고</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp03.do">원서접수현황</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp04.do">내신성적산출시뮬레이션</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp05.do">타시도원서작성</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp06.do">접수원서조회</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp10.do">면접대상자조회</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp07.do">시험장조회</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp08.do">합격자조회</a></li>
+                  <li class="depth2"><a href="/jbd/ip/JbdIp09.do">상담사례</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="/jbd/bj/JbdBj00.do">평준화배정</a></li>
+                  <li class="depth2"><a href="/jbd/bj/JbdBj01.do">안내평준화배정</a></li>
+                  <li class="depth2"><a href="/jbd/bj/JbdBj02.do">절차학군현황배정</a></li>
+                  <li class="depth2"><a href="/jbd/bj/JbdBj03.do">결과조회</a></li>
+                  <li class="depth2"><a href="/jbd/bj/JbdBj04.do">상담사례</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs00_jh.do">고입전형 맞춤형 가이드</a></li>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs01.do">공지사항</a></li>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs02.do">자주묻는 질문</a></li>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs03.do">질의응답</a></li>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs04.do">자료실</a></li>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs06.do">관계법령</a></li>
+                  <li class="depth2"><a href="/jbd/ms/JbdMs07.do">관련서식다운로드</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="/jbd/hg/JbdHg00.do">학교소개 정보조회 </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__bottom">
+          <ul>
+            <li class="quick-memu"><a href="/jbd/ms/JbdMs00_jh.do">고교입학<br/>맞춤 가이드</a></li>
+            <li class="quick-memu"><a href="/jbd/ms/JbdMs00_jh.do">전&middot;편입학 맞춤가이드</a></li>
+            <li class="quick-memu"><a href="/jbd/jp/JbdJp00_s0.do">고교 전&middot;편입학 안내</a></li>
+            <li class="quick-memu"><a href="/jbd/ip/JbdIp00_s1.do">고교<br/>입학안내</a></li>
+            <li class="quick-memu"><a href="/jbd/bj/JbdBj00.do">평준화<br/>배정안내</a></li>
+          </ul>
+        </div>
+      </aside>
+      
+      
+    </div>
+  </div>
+</header>
+
+
+
+
+
+<!-- // header -->
+<!-- Contents -->
+<main class="container" id="container">
+  <div class="contents sub">
+    <!-- sub visual -->
+    <section class="component__wrap sub-visual">
+      <div class="component__inner">
+        <div class="sub-visual__wrap">
+          <div class="sub-visual__title">
+            <strong class="title">자료실</strong>
+            <p class="desc">자료실에 관련해 다양한 정보를 제공합니다</p>
+          </div>
+          
+          <div class="sub-visual__breadcrumb">
+            <div class="breadcrumb-navi">
+              <a href="javascript:void(0);" class="btn-home">
+                <span class="blind">홈</span>
+              </a>
+              <ul class="breadcrumb-navi__list">
+                <li class="breadcrumb-navi__item">
+                  <a href="#" class="breadcrumb-navi__link">맞춤서비스</a>
+                  <ul class="breadcrumb-navi__item-list">
+                    <li><a href="/jbd/jp/JbdJp00_s0.do"><span>전&middot;편입학</span></a></li>
+                    <li><a href="/jbd/ip/JbdIp00_s1.do"><span>고교입학</span></a></li>
+                    <li><a href="/jbd/bj/JbdBj00_s0.do"><span>평준화배정</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs00_jh.do"><span>맞춤서비스</span></a></li>
+                    <li><a href="/jbd/hg/JbdHg00.do"><span>학교정보조회</span></a></li>
+                  </ul>
+                </li>
+                <li class="breadcrumb-navi__item">
+                  <a href="#" class="breadcrumb-navi__link">자료실</a>
+                  <ul class="breadcrumb-navi__item-list">
+                    <li><a href="/jbd/ms/JbdMs00_jh.do"><span>고입전형 맞춤형 가이드</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs01.do"><span>공지사항</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs02.do"><span>자주묻는 질문</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs03.do"><span>질의응답</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs04.do"><span>자료실</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs06.do"><span>관계법령</span></a></li>
+                    <li><a href="/jbd/ms/JbdMs07.do"><span>관련서식 다운로드</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- sub tab_menu -->
+    <section class="component__wrap contents-tab">
+      <div class="component__inner">
+        <div class="menu-tab-wrap">
+          <div class="menu-tab menu-tab--default">
+            <ul class="menu-tab__list">
+              <li class="menu-tab__item">
+                <a href="/jbd/ms/JbdMs00_jh.do" class="menu-tab__link">
+                  <span>고입전형 맞춤형 가이드</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="/jbd/ms/JbdMs01.do" class="menu-tab__link">
+                  <span>공지사항</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="/jbd/ms/JbdMs02.do" class="menu-tab__link">
+                  <span>자주묻는 질문</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="/jbd/ms/JbdMs03.do" class="menu-tab__link">
+                  <span>질의응답</span>
+                </a>
+              </li>
+              <li class="menu-tab__item is-active">
+                <a href="/jbd/ms/JbdMs04.do" class="menu-tab__link">
+                  <span>자료실</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="/jbd/ms/JbdMs06.do" class="menu-tab__link">
+                  <span>관계법령</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-tab__list">
+              <li class="menu-tab__item">
+                <a href="/jbd/ms/JbdMs07.do" class="menu-tab__link">
+                  <span>관련서식 다운로드</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <form name="myform" method="post">
+      <input type="hidden" name="pg"          value="" />
+      <input type="hidden" name="sb"          value="" />
+
+    <section class="component__wrap">
+      <div class="component__inner">
+        <h3 class="page__title">자료실</h3>
+
+        <div class="page__contents">
+
+          <div class="text-box__wrap">
+            <div class="text-box__body board-search">
+              <div class="text-box__cont">
+                <div class="form__wrap">
+                  <div class="form__group row">
+                    <div class="select__wrap">
+                      <label class="select__label" for="jj_br">주제분류</label>
+                      <select class="select__box" id="jj_br" name="jj_br">
+                        <option class="select__item" value = "">전체</option>
+                        
+                           <option class="select__item" value = "1" >입학</option>
+                        
+                           <option class="select__item" value = "2" >전학</option>
+                        
+                           <option class="select__item" value = "3" >편입학</option>
+                        
+                           <option class="select__item" value = "4" >기타</option>
+                        
+                      </select>
+                    </div>
+                    <div class="select__wrap">
+                      <label class="select__label" for="search_gb">조회조건</label>
+                      <select class="select__box" id="search_gb" name="search_gb">
+                        <option class="select__item" value="1" selected>제목 </option>
+                        <option class="select__item" value="2" >내용</option>
+                        <option class="select__item" value="3" >제목+내용</option>
+                      </select>
+                    </div>
+                    
+                    <div class="input__wrap input__search">
+                      <div class="input__box">
+                        <input id="ipt04" type="text" name="title" value="" placeholder="" value="">
+                      </div>
+                      <button type="button" class="btn__search type2" onclick="JS_Search();">검색<i class="ico ico__search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="text-box__wrap">
+            <div class="text-box__body">
+              <div class="text-box__cont">
+                <div class="table__wrap table--col scroll">
+                  <table>
+                    <caption>제목, 내용으로 구성된 표입니다.</caption>
+                    <colgroup>
+                      <col style="width: 5%;">
+                      <col style="width: 10%;">
+                      <col style="width: auto;">
+                      <col style="width: 15%;">
+                      <col style="width: 5%;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                          <th socpe="col">번호</th>
+                          <th socpe="col">주제분류</th>
+                          <th socpe="col">제목</th>
+                          <th socpe="col">등록일</th>
+                          <th socpe="col">조회</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      
+                      <tr>
+                        <td>289</td>
+                        <td>입학</td>
+                        <td><a href="javascript:board_view('289');">9</a></td>
+                        <td>2021-12-28</td>
+                        <td>31</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>288</td>
+                        <td>기타</td>
+                        <td><a href="javascript:board_view('288');">8</a></td>
+                        <td>2021-12-28</td>
+                        <td>7</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>287</td>
+                        <td>전학</td>
+                        <td><a href="javascript:board_view('287');">7</a></td>
+                        <td>2021-12-28</td>
+                        <td>4</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>286</td>
+                        <td>편입학</td>
+                        <td><a href="javascript:board_view('286');">6</a></td>
+                        <td>2021-12-28</td>
+                        <td>5</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>285</td>
+                        <td>기타</td>
+                        <td><a href="javascript:board_view('285');">5</a></td>
+                        <td>2021-12-28</td>
+                        <td>7</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>284</td>
+                        <td>전학</td>
+                        <td><a href="javascript:board_view('284');">4</a></td>
+                        <td>2021-12-28</td>
+                        <td>0</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>283</td>
+                        <td>기타</td>
+                        <td><a href="javascript:board_view('283');">3</a></td>
+                        <td>2021-12-28</td>
+                        <td>0</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>282</td>
+                        <td>전학</td>
+                        <td><a href="javascript:board_view('282');">2</a></td>
+                        <td>2021-12-28</td>
+                        <td>2</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>281</td>
+                        <td>입학</td>
+                        <td><a href="javascript:board_view('281');">1</a></td>
+                        <td>2021-12-28</td>
+                        <td>1</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>261</td>
+                        <td>기타</td>
+                        <td><a href="javascript:board_view('261');">첨부파일테스트</a></td>
+                        <td>2020-07-01</td>
+                        <td>51</td>
+                      </tr>
+                      
+                      
+                      
+                    </tbody>
+                  </table>
+                </form>
+                  <div class="paging__wrap">
+                  
+
+
+
+
+
+<div class="paging">
+  
+  <div class="paging-prev">
+  
+	</div>
+   
+	<!-- D : active page a태그에 .is-active 추가 -->
+	<div class="paging-nums">
+	
+    <a href="javascript:list(1)"  class="is-active">1<span class="blind">페이지</span></a>
+	
+    <a href="javascript:list(2)" >2<span class="blind">페이지</span></a>
+	
+	</div>
+	
+	<div class="paging-next">
+  
+		<a href="javascript:list(2)" class="next"><span class="blind">다음 페이지로 이동</span></a>
+	
+	</div>
+</div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </form>
+
+    
+    <!-- floating menu -->
+    
+
+
+
+
+
+<aside class="floating-menu">
+      <ul class="floating-menu__list">
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="/jbd/ms/JbdMs00_jh.do">
+            고교입학 <br />
+            맞춤 가이드
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="/jbd/jp/JbdJp00_s0.do">
+            전·편입학 <br />
+            맞춤가이드
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="/jbd/jp/JbdJp00_s0.do">
+            고교 전·편입학 <br />
+            안내
+          </a>
+        </li>
+        <li class="floating-menu__item">
+            <a class="floating-menu__link" href="/jbd/ip/JbdIp00_s1.do">
+            고교 <br />
+            입학안내
+          </a>
+        </li>
+        <li class="floating-menu__item">
+          <a class="floating-menu__link" href="/jbd/bj/JbdBj00.do">
+            평준화 <br />
+            배정안내
+          </a>
+        </li>
+      </ul>
+      <button class="movetotop" class="button">
+        <span class="blind">상단 이동</span>
+      </button>
+        
+      
+    </aside>
+    <!-- // floating menu -->
+  </div>
+
+  
+</main>
+<!-- // Contents -->
+<!-- footer -->
+
+
+
+
+
+
+<footer class="footer__wrap">
+  <div class="footer__top">
+    <div class="footer__inner">
+      <div class="footer__policy">
+        <ul class="policy__list">
+          <li class="policy__item"><a href="https://www.jbe.go.kr/index.jbe?menuCd=DOM_000000107003001000">개인정보처리방침</a></li>
+          <li class="policy__item"><a href="/jbd/etc/num.do">전화번호안내</a></li>
+          <li class="policy__item"><a href="/jbd/etc/homepage.do">홈페이지이용약관</a></li>
+          <li class="policy__item"><a href="/jbd/etc/email.do">이메일 무단수집거부</a></li>
+          <li class="policy__item"><a href="/jbd/etc/copyright.do">저작권안내</a></li>
+          <li class="policy__item"><a href="https://939.co.kr/jbesatp">원격지원</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__inner">
+      <h2 class="footer__logo"><a href="/"><img src="/static/images/common/img_footer_logo.png" alt="전라북도교육청 logo"></a></h2>
+      <div class="footer__copy">
+        <div class="copy__title">전라북도교육청 고등학교입학전형포털</div>
+        <ul class="copy__list">
+          <li class="copy__item">(55065) 전라북도 전주시 완산구 홍산로 111 전라북도교육청</li>
+          <li class="copy__item">TEL. 063)239-3339</li>
+          <li class="copy__item">FAX. 063)220-9407</li>
+        </ul>
+        <strong class="copy__copyright">
+          Copyright(C) Jeollabukdo Office of Education. All Rights Reserved.
+        </strong>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- // footer -->
+</div>
+</body>
+</html>

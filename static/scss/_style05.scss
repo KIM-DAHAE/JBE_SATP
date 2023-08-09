@@ -1,0 +1,500 @@
+@import "_color.scss";
+// 작업자들 개별 작업용 scss
+// 작업자 늘어나면 style0n.scss 로 style file 추가 사용 가능
+
+
+.component {
+    // 230714 sub01_03 학교현황 일반고(평준화) 페이지 scss
+    &__school-map {
+        .text-box{
+            &__cont{
+                &+.text-box__cont {
+                    margin-top: 20px;
+                }
+                
+                &:nth-child(2) {
+                    margin-top: 40px;
+                }
+                
+                &--title {
+                    color: $black;
+                }
+                
+
+                .map-container {
+                    display: flex;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .btn{
+            &__wrap {
+                &.square {
+                    .btn {
+                        height: 50px;
+                        
+                        &.gray {
+                            border: 1px solid #dfdfdf;
+                            background-color: #f8f8f8;
+                        }
+                    }
+                }
+                
+                &.map-btn {
+                    .btn {
+                        &.map-expand {
+                            position: relative;
+                            padding: 0 40px 0 12px;
+                            height: 36px;
+                            font-size: 16px;
+                            color: #858585;
+                            border-radius: 4px;
+                            border: 1px solid #dfdfdf;
+                            background-color: $white;
+                            box-shadow: 0px 3px 6px 0px rgba(84, 86, 88, 0.18);
+                            
+                            &::after{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                right: 12px;
+                                transform: translateY(-50%);
+                                width: 16px;
+                                height: 16px;
+                                background: url("../../static/images/sub/ico_btn_map.png") no-repeat 0%/100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__inner {
+                &.col {
+                    gap: 10px;
+                }
+            }
+        }
+        
+        .table__wrap {
+            &.table-form {
+                .checkbox {
+                    &__wrap {
+                        gap: 6px;
+                    }
+
+                    &__checkbox {
+                        background-color: $white;
+
+                        &:checked {
+                            background: $primary url('../images/icon/ico_checkbox_checked.svg') no-repeat center / 100%;
+                        }
+                    }
+                }
+                
+                tbody {
+                    .checkbox{
+                        &__label {
+                            color: $black;
+                        }
+                    }
+                    
+                    .line-bt {
+                        border-bottom: 1px solid #989898;
+                    }
+                    
+                    .line-l {
+                        border-left: 1px solid #dfdfdf;
+                    }
+                }
+            }
+        }
+    }
+
+    // 203717 sub02_05 내신성적산출 시뮬레이션 페이지 scss
+    &__grade-simulator {
+        .bullet__list{
+            &--ref {
+                &.text-gray {
+                    color: #747474;
+
+                    li {
+                        &:has(.flex-box) {
+                            &:before {
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .flex-box {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+            }
+
+            &.order-red {
+                margin-top: 12px;
+                color: #f35757;
+
+                >li {
+                    padding-left: 0;
+                }
+            }
+        }
+        
+        .table {
+            &__top {
+                margin-bottom: 15px;
+                color: #747474;
+                font-size: 15px;
+            }
+
+            &__wrap {
+                .th-fix {
+                    border-left: 1px solid #dfdfdf;
+                    color: #0064cb;
+                }
+
+                td {
+                    text-align: left;
+                    padding: 8px;
+                }
+
+                &+.bullet__list--ref {
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        .form {
+            &__wrap {
+                &.type-grade {
+                    .input {
+                        &__wrap {
+                            text-align: left;
+                        }
+
+                        &__box {
+                            flex: 1;
+
+                            input {
+                                padding: 8px
+                            }
+                        }
+                    }
+
+                    .select {
+                        &__wrap {
+                            text-align: left;
+                        }
+
+                        &__box {
+                            padding: 8px 40px 8px 8px;
+                        }
+                    }
+                }
+
+                .checkbox {
+                    &__label {
+                        &.ft-15 {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// style05.scss
+// tablet
+@media screen and (min-width: 641px) and (max-width: 1919px){
+    // 230714 sub01_01_03 학교현황 일반고(평준화) 페이지 관련
+    .component {
+        &__school-map {
+            .text-box{
+                &__cont{
+                    &+.text-box__cont {
+                        margin-top: vw-pc(20);
+                    }
+                    
+                    &:nth-child(2) {
+                        margin-top: vw-pc(40);
+                    }
+                }
+            }
+
+            .btn {
+                &__wrap {
+                    &.square {
+                        .btn {
+                            height: vw-pc(50);
+                            font-size: vw-pc(17);
+                        }
+                    }
+                    
+                    &.map-btn {
+                        .btn {
+                            &.map-expand {
+                                padding: 0 vw-pc(40) 0 vw-pc(12);
+                                height: vw-pc(36);
+                                font-size: vw-pc(16);
+                                border-radius: vw-pc(4);
+                                box-shadow: 0px vw-pc(3) vw-pc(6) 0px rgba(84, 86, 88, 0.18);
+                                
+                                &::after{
+                                    right: vw-pc(12);
+                                    width: vw-pc(16);
+                                    height: vw-pc(16);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__inner {
+                    &.col {
+                        gap: vw-pc(10);
+                    }
+                }
+            }
+
+            .table__wrap {
+                &.table-form {
+                    .checkbox {
+                        &__wrap {
+                            gap: vw-pc(6);
+                        }
+                    }
+                }
+            }
+        }
+
+        // 203717 sub02_05 내신성적산출 시뮬레이션 페이지 scss
+        &__grade-simulator {
+            .bullet__list{
+                &--ref {
+                    &.text-gray {
+                        .flex-box {
+                            gap: vw-pc(20);
+                        }
+                        
+                    }
+                }
+
+                &.order-red {
+                    margin-top: vw-pc(12);
+                }
+            }
+            
+            .table {
+                &__top {
+                    margin-bottom: vw-pc(15);
+                    font-size: vw-pc(15);
+                }
+
+                &__wrap {
+                    td {
+                        padding: vw-pc(8);
+                    }
+                }
+            }
+
+            .form {
+                &__wrap {
+                    &.type-grade {
+                        .input {
+                            &__box {
+                                width: vw-pc(70);
+
+                                input {
+                                    padding: vw-pc(8);
+                                }
+                            }
+                        }
+
+                        .select {
+                            &__box {
+                                padding: vw-pc(8) vw-pc(40) vw-pc(8) vw-pc(8);
+                            }
+                        }
+                    }
+                    
+                    .align--right {
+                        input {
+                            padding: vw-pc(8) vw-pc(16);
+                        }
+                    }
+
+                    .checkbox {
+                        &__label {
+                            &.ft-15 {
+                                font-size: vw-pc(15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 640px) {
+    // 230714 sub01_01_03 학교현황 일반고(평준화) 페이지 관련
+    .component {
+        &__school-map {
+            .text-box{
+                &__cont{
+                    &+.text-box__cont {
+                        margin-top: vw-mo(20);
+                    }
+                    
+                    &:nth-child(2) {
+                        margin-top: vw-mo(40);
+                    }
+                }
+            }
+
+            .btn {
+                &__wrap {
+                    &.square {
+                        .btn {
+                            height: vw-mo(50);
+                            padding: vw-mo(16) vw-mo(27);
+                            font-size: vw-mo(18);
+                        }
+                    }
+                    
+                    &.map-btn {
+                        .btn {
+                            &.map-expand {
+                                padding: vw-mo(9) vw-mo(37) vw-mo(9) vw-mo(11) ;
+                                height: vw-mo(36);
+                                font-size: vw-mo(18);
+                                border-radius: vw-mo(4);
+                                box-shadow: 0px vw-mo(3) vw-mo(6) 0px rgba(84, 86, 88, 0.18);
+                                
+                                &::after{
+                                    right: vw-mo(12);
+                                    width: vw-mo(16);
+                                    height: vw-mo(16);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__inner {
+                    &.col {
+                        gap: vw-mo(10);
+                    }
+                }
+            }
+            
+            .table__wrap {
+                &.table-form {
+                    .checkbox {
+                        &__wrap{
+                            gap: vw-mo(8);
+                        }
+
+                        &__label {
+                            font-size: vw-mo(20);
+                        }
+                    }
+                    
+                    tbody {
+                        .checkbox{
+                            &__label {
+                                font-size: vw-mo(18);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 203717 sub02_05 내신성적산출 시뮬레이션 페이지 scss
+        &__grade-simulator {
+            .bullet__list{
+                &--ref {
+                    &.text-gray {
+                        .flex-box {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 0;
+                        }
+
+                        li {
+                            &:has(.flex-box) {
+                                &:before {
+                                    top: 0;
+                                    transform: translateY(0);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.order-red {
+                    margin-top: vw-mo(14);
+                }
+            }
+            
+            .table {
+                &__top {
+                    margin-bottom: vw-mo(30);
+                    font-size: vw-mo(18);
+                }
+
+                &__wrap {
+                    td {
+                        padding: vw-mo(8);
+                    }
+                }
+            }
+
+            .form {
+                &__wrap {
+                    &.type-grade {
+                        .input {
+                            &__box {
+                                width: vw-mo(90);
+
+                                input {
+                                    padding: vw-mo(8);
+                                }
+                            }
+                        }
+
+                        .select {
+                            &__box {
+                                padding: vw-mo(17) vw-mo(40) vw-mo(17) vw-mo(13);
+                            }
+                        }
+                    }
+
+                    .checkbox {
+                        &__label {
+                            &.ft-15 {
+                                font-size: vw-mo(18);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

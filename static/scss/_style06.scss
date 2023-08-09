@@ -1,0 +1,105 @@
+@import "_color.scss";
+// 작업자들 개별 작업용 scss
+// 작업자 늘어나면 style0n.scss 로 style file 추가 사용 가능
+
+// 02_03 고교입학-일정 및 학교 현황
+.bar--multi{
+    display: flex;
+    margin-left:20px;
+    gap:8px;
+}
+
+.table__wrap td{
+    .table--bar{
+        display: inline-block;
+        width:67px;
+        height: 24px;
+        color:$white;
+        background: $primary;
+        font-size:15px;
+        line-height: 1.7;
+        border-radius: 4px;
+        margin-bottom:10px;
+    }
+}
+// 02_03 고교입학-일정 및 학교 현황
+
+// 04_07 맞춤서비스 - 관련서식 다운로드
+.multi-list{
+    &__download{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .btn__download {
+            min-height: 40px;
+            margin:10px 0;
+            font-size: 14px;
+            justify-content: space-between;
+        }
+        :hover{
+            background:$primary;
+        }
+        .down01{
+            width:49.2%;
+        }
+        .down02{
+            width:23.8%;
+        }
+    }
+}
+// 04_07 맞춤서비스 - 관련서식 다운로드
+
+
+// style06.scss
+// tablet
+@media screen and (min-width: 641px) and (max-width: 1919px){
+
+// 02_03 고교입학-일정 및 학교 현황
+    .bar--multi{
+        display: flex;
+        margin-left: vw-pc(20);
+        gap: vw-pc(8);
+    }
+    .table__wrap td{
+        .table--bar{
+            min-width:vw-pc(67);
+            width: auto;
+            height: auto;
+            align-items: center;
+            font-size:vw-pc(15);
+            line-height: 1.7;
+            border-radius: vw-pc(4);
+        }
+    }
+    // 02_03 고교입학-일정 및 학교 현황
+
+    // 04_07 맞춤서비스 - 관련서식 다운로드
+    .multi-list__download{
+        .btn__download {
+            margin: vw-pc(10 0);
+            font-size: vw-pc(14);
+        }
+    }
+    // 04_07 맞춤서비스 - 관련서식 다운로드
+}
+
+// mobile
+@media screen and (max-width: 640px) {
+
+// 02_03 고교입학-일정 및 학교 현황
+    .bar--multi{
+        margin-left: 0;
+        gap: vm-mo(8);
+    }
+// 02_03 고교입학-일정 및 학교 현황
+
+// 04_07 맞춤서비스 - 관련서식 다운로드
+    .multi-list__download{
+        .btn__download {
+            min-height: vw-mo(60);
+            margin: vw-mo(10 0);
+            font-size: vw-mo(14);
+            width:100%;
+        }
+    }
+// 04_07 맞춤서비스 - 관련서식 다운로드
+}

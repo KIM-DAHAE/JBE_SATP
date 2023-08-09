@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<title>page component guide</title>
+
+
+<link rel="stylesheet" href="../../static/css/swiper.min.css">
+<link rel="stylesheet" href="../../static/css/common.css">
+<link rel="stylesheet" href="../../static/css/style.css">
+<script type="text/javascript" src="../../static/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../../static/js/ui.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+<!-- header -->
+<header class="header__wrap">
+  <div class="header__top">
+    <div class="header__inner">
+      <div class="header__util">
+        <div class="util__wrap">
+          <a href="javascript:;" class="util__item home">홈으로</a>
+        </div>
+        <div class="util__wrap">
+          <a href="javascript:;" class="util__item login">로그인</a>
+          <a href="javascript:;" class="util__item portal">고입업무포털(내부업무용)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="header__inner">
+      <a href="javascript:;"><h1 class="header__logo"><span class="blind">전라북도교육청 고등학교입학전형포털</span></h1></a>
+      <button type="button" class="btn__gnb"><span class="blind">메뉴 열기</span></button>
+  
+      <!-- gnb -->
+      <nav class="gnb__wrap show-pc">
+        <ul class="gnb__wrap--depth1">
+          <li class="depth1"><a href="javascript:;">전&middot;편입학</a></li>
+          <li class="depth1"><a href="javascript:;">고교입학</a></li>
+          <li class="depth1"><a href="javascript:;">평준화배정</a></li>
+          <li class="depth1"><a href="javascript:;">맞춤서비스</a></li>
+          <li class="depth1"><a href="javascript:;">학교정보조회</a></li>
+        </ul>
+  
+        <div class="gnb__wrap--depth2">
+          <div class="depth2__inner">
+            <div class="depth2__box">
+              <strong class="depth2__title">전&middot;편입학</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">전&middot;편입학 안내</a></li>
+                <li class="depth2"><a href="javascript:;">편제확인</a></li>
+                <li class="depth2"><a href="javascript:;">학교현황</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">고교입학</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">고입안내</a></li>
+                <li class="depth2"><a href="javascript:;">입학절차</a></li>
+                <li class="depth2"><a href="javascript:;">일정및학교현황</a></li>
+                <li class="depth2"><a href="javascript:;">원서접수현황</a></li>
+                <li class="depth2"><a href="javascript:;">내신성적산출시뮬레이션</a></li>
+                <li class="depth2"><a href="javascript:;">타시도원서작성</a></li>
+                <li class="depth2"><a href="javascript:;">접수원서조회</a></li>
+                <li class="depth2"><a href="javascript:;">면접대상자조회</a></li>
+                <li class="depth2"><a href="javascript:;">시험장조회</a></li>
+                <li class="depth2"><a href="javascript:;">합격자조회</a></li>
+                <li class="depth2"><a href="javascript:;">상담사례</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">평준화배정</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">평준화배정</a></li>
+                <li class="depth2"><a href="javascript:;">안내평준화배정</a></li>
+                <li class="depth2"><a href="javascript:;">절차학군현황배정</a></li>
+                <li class="depth2"><a href="javascript:;">결과조회</a></li>
+                <li class="depth2"><a href="javascript:;">상담사례</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">맞춤서비스</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">고입전형 맞춤형 가이드</a></li>
+                <li class="depth2"><a href="javascript:;">공지사항</a></li>
+                <li class="depth2"><a href="javascript:;">자주묻는 질문</a></li>
+                <li class="depth2"><a href="javascript:;">질의응답</a></li>
+                <li class="depth2"><a href="javascript:;">자료실</a></li>
+                <li class="depth2"><a href="javascript:;">관계법령</a></li>
+                <li class="depth2"><a href="javascript:;">관련서식다운로드</a></li>
+              </ul>
+            </div>
+            <div class="depth2__box">
+              <strong class="depth2__title">학교정보조회</strong>
+              <ul>
+                <li class="depth2"><a href="javascript:;">학교소개 정보조회 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb mobile -->
+      <aside class="gnb__wrap show-mo is-active">
+        <div class="gnb__top">
+          <div class="header__util">
+            <div class="util__wrap">
+              <a class="util__item login">로그인</a>
+              <a class="util__item portal">고입업무포털(내부업무용)</a>
+            </div>
+          </div>
+          <button class="btn__gnb-close"><i class="ico ico__close"></i><span class="blind">메뉴 닫기</span></button>
+        </div>
+        <div class="gnb__body">
+          <ul class="gnb__wrap--depth1">
+            <li class="depth1"><a href="javascript:;">전&middot;편입학</a></li>
+            <li class="depth1"><a href="javascript:;">고교입학</a></li>
+            <li class="depth1"><a href="javascript:;">평준화배정</a></li>
+            <li class="depth1"><a href="javascript:;">맞춤서비스</a></li>
+            <li class="depth1"><a href="javascript:;">학교정보조회</a></li>
+          </ul>
+          <div class="gnb__wrap--depth2">
+            <div class="depth2__inner">
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">전&middot;편입학 안내</a></li>
+                  <li class="depth2"><a href="javascript:;">편제확인</a></li>
+                  <li class="depth2"><a href="javascript:;">학교현황</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">고입안내</a></li>
+                  <li class="depth2"><a href="javascript:;">입학절차</a></li>
+                  <!-- [Dev] 3depth 있는 case: click시 .depth2에 'is-active' class 추가 -->
+                  <li class="depth2"><a href="javascript:;">일정및학교현황</a>
+                    <button class="btn__more"><i class="ico ico__plus--blue"><span class="blind">메뉴열기</span></i></button>
+                    <div class="depth3__wrap">
+                      <ul>
+                        <li class="depth3"><a href="javascript:;">일반고(평준화)</a></li>
+                        <li class="depth3"><a href="javascript:;">일반고(비평준화)</a></li>
+                        <li class="depth3"><a href="javascript:;">특성화고</a></li>
+                        <li class="depth3"><a href="javascript:;">특목고</a></li>
+                        <li class="depth3"><a href="javascript:;">자율고</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="depth2"><a href="javascript:;">원서접수현황</a></li>
+                  <li class="depth2"><a href="javascript:;">내신성적산출시뮬레이션</a></li>
+                  <li class="depth2"><a href="javascript:;">타시도원서작성</a></li>
+                  <li class="depth2"><a href="javascript:;">접수원서조회</a></li>
+                  <li class="depth2"><a href="javascript:;">면접대상자조회</a></li>
+                  <li class="depth2"><a href="javascript:;">시험장조회</a></li>
+                  <li class="depth2"><a href="javascript:;">합격자조회</a></li>
+                  <li class="depth2"><a href="javascript:;">상담사례</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">평준화배정</a></li>
+                  <li class="depth2"><a href="javascript:;">안내평준화배정</a></li>
+                  <li class="depth2"><a href="javascript:;">절차학군현황배정</a></li>
+                  <li class="depth2"><a href="javascript:;">결과조회</a></li>
+                  <li class="depth2"><a href="javascript:;">상담사례</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">고입전형 맞춤형 가이드</a></li>
+                  <li class="depth2"><a href="javascript:;">공지사항</a></li>
+                  <li class="depth2"><a href="javascript:;">자주묻는 질문</a></li>
+                  <li class="depth2"><a href="javascript:;">질의응답</a></li>
+                  <li class="depth2"><a href="javascript:;">자료실</a></li>
+                  <li class="depth2"><a href="javascript:;">관계법령</a></li>
+                  <li class="depth2"><a href="javascript:;">관련서식다운로드</a></li>
+                </ul>
+              </div>
+              <div class="depth2__box">
+                <ul>
+                  <li class="depth2"><a href="javascript:;">학교소개 정보조회 </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__bottom">
+          <ul>
+            <li class="quick-memu"><a href="javascript:;">고교입학<br/>맞춤 가이드</a></li>
+            <li class="quick-memu"><a href="javascript:;">전&middot;편입학 맞춤가이드</a></li>
+            <li class="quick-memu"><a href="javascript:;">고교 전&middot;편입학 안내</a></li>
+            <li class="quick-memu"><a href="javascript:;">고교<br/>입학안내</a></li>
+            <li class="quick-memu"><a href="javascript:;">평준화<br/>배정안내</a></li>
+          </ul>
+        </div>
+      </aside>
+      <!-- // gnb -->
+    </div>
+  </div>
+</header>
+<!-- // header -->
+
+
+
+
+
+<!-- Contents -->
+<main class="container" id="container">
+  <div class="contents sub">
+    <!-- sub visual -->
+    <section class="component__wrap sub-visual">
+      <div class="component__inner">
+        <div class="sub-visual__wrap">
+          <div class="sub-visual__title">
+            <strong class="title">subTitle</strong>
+            <p class="desc">subDescription</p>
+          </div>
+
+          <div class="sub-visual__breadcrumb">
+            <div class="breadcrumb-navi">
+              <a href="javascript:void(0);" class="btn-home">
+                <span class="blind">홈</span>
+              </a>
+              <ul class="breadcrumb-navi__list">
+                <li class="breadcrumb-navi__item">
+                  <a href="#" class="breadcrumb-navi__link">depth1</a>
+                  <ul class="breadcrumb-navi__item-list">
+                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                  </ul>
+                </li>
+                <li class="breadcrumb-navi__item">
+                  <a href="#" class="breadcrumb-navi__link">depth2</a>
+                  <ul class="breadcrumb-navi__item-list">
+                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                  </ul>
+                </li>
+                <li class="breadcrumb-navi__item show-pc">
+                  <a href="#" class="breadcrumb-navi__link">depth3depth3depth3depth3depth3depth3</a>
+                  <ul class="breadcrumb-navi__item-list">
+                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                  </ul>
+                </li>
+                <li class="breadcrumb-navi__item show-pc">
+                  <a href="#" class="breadcrumb-navi__link">depth4</a>
+                  <ul class="breadcrumb-navi__item-list">
+                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page__share">
+              <div class="share-sns">
+                <button type="button" class="btn-sns"><span class="blind">공유하기</span></button>
+                <div class="sns-list">
+                  <button class="btn-close--sns"><span class="blind">공유하기 닫기</span></button>
+                  <ul>
+                    <li><a href="javascript:void(0);" class="btn-sns--kakao" target="_blank" title="새창열림"><span class="blind">카카오톡</span></a></li>
+                    <li><a href="javascript:void(0);" class="btn-sns--twitter" target="_blank" title="새창열림"><span class="blind">트위터</span></a></li>
+                    <li><a href="javascript:void(0);" class="btn-sns--naver" target="_blank" title="새창열림"><span class="blind">네이버</span></a></li>
+                    <li><a href="javascript:void(0);" class="btn-sns--kakao-stroy" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
+                    <li><a href="javascript:void(0);" class="btn-sns--copy-link"><span class="blind">링크복사</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="btn-print"><span class="blind">인쇄</span></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <!-- sub tab_menu -->
+    <section class="component__wrap contents-tab">
+      <div class="component__inner">
+        <div class="menu-tab-wrap">
+          <div class="menu-tab menu-tab--default">
+            <ul class="menu-tab__list">
+              <li class="menu-tab__item is-active">
+                <a href="../@guide/common.html" class="menu-tab__link">
+                  <span>고입 안내</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>입학절차</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>일정 및 학교현황</span>
+                  <i class="ico ico-more--toggle">
+                    <span class="blind">더보기</span>
+                  </i>
+                </a>
+                <div class="menu-tab__sub-wrap">
+                  <ul class="menu-tab__sub">
+                    <li class="menu-tab__sub-list"><a href="javascript:void(0);" class="menu-tab__sub-link"><span>일반고(평준화)</span></a></li>
+                    <li class="menu-tab__sub-list"><a href="javascript:void(0);" class="menu-tab__sub-link"><span>일반고(비평준화)</span></a></li>
+                    <li class="menu-tab__sub-list"><a href="javascript:void(0);" class="menu-tab__sub-link"><span>특성화고</span></a></li>
+                    <li class="menu-tab__sub-list"><a href="javascript:void(0);" class="menu-tab__sub-link"><span>특목고</span></a></li>
+                    <li class="menu-tab__sub-list"><a href="javascript:void(0);" class="menu-tab__sub-link"><span>자율고</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>원서접수현황</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>내신성적산출 시뮬레이션</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>타시도 원서작성</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-tab__list">
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>접수원서 조회</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>면접대상자 조회</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>시험장 조회</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="javascript:void(0);" class="menu-tab__link">
+                  <span>합격자 조회</span>
+                </a>
+              </li>
+              <li class="menu-tab__item">
+                <a href="../sub/sub02_11.html" class="menu-tab__link">
+                  <span>상담사례(Accordion Guide)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sub contents -->  
+    <section class="component__wrap">
+      <div class="component__inner"> 
+        <h3 class="page__title">subPageTitle</h3>
+
+        <!-- CASE1: contents tab -->
+        <div class="page__tab">
+          <!-- page tabMenu -->
+          <div class="tab__menu">
+            <!-- tabMenu case Round / PC-->
+            <div class="menu-tab menu-tab--rounded show-pc">
+              <ul class="menu-tab__list">
+                <li class="menu-tab__item is-active">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab1">
+                    <span>textStyle</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab2">
+                    <span>table</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab3">
+                    <span>form</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab4">
+                    <span>button</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab5">
+                    <span>icon</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab6">
+                    <span>text-box Case</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- tabMenu case Round / Mobile-->
+            <div class="menu-tab menu-tab--rounded show-mo">
+              <ul class="menu-tab__list">
+                <li class="menu-tab__item is-active">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab1">
+                    <span>textStyle</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab2">
+                    <span>table</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab3">
+                    <span>form</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu-tab__list">
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab4">
+                    <span>button</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab5">
+                    <span>icon</span>
+                  </a>
+                </li>
+                <li class="menu-tab__item">
+                  <a href="javascript:void(0);" class="menu-tab__link" data-tab="tab6">
+                    <span>text-box Case</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <!-- page tabContents -->
+          <!-- textStyle guide -->
+          <div class="tab__cont tab1 is-active" data-target="tab1">  
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico1"></i>
+                <p class="text-box__head--title">text-box headTitle</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">highlight--blue</span></strong>
+                  <div class="text-box__cont--text">
+                    <p>contents text</p>
+                    <div class="text-box__cont--desc">
+                      content description
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--red">highlight--color (임시색상. 필요한 색 추가하여 variation)</span></strong>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico1"></i>
+                <p class="text-box__head--title">align</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title">algin--left</strong>
+                  <div class="text-box__cont--text">
+                    <div class="align--left">
+                      <p>.algin--left</p>
+                    </div>
+                  </div>
+                  <div class="text-box__cont--text">
+                    <div class="align--left" style="display: flex; gap: 12px;">
+                      <p>.algin--left</p>
+                      <p>.algin--left</p>
+                      <p>.algin--left</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title">algin--right</strong>
+                  <div class="text-box__cont--text">
+                    <div class="align--right">
+                      <p>.algin--right</p>
+                    </div>
+                  </div>
+                  <div class="text-box__cont--text">
+                    <div class="align--right" style="display: flex; gap: 12px;">
+                      <p>.algin--right</p>
+                      <p>.algin--right</p>
+                      <p>.algin--right</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title">algin--center</strong>
+                  <div class="text-box__cont--text">
+                    <div class="align--center">
+                      <p>.algin--center</p>
+                    </div>
+                  </div>
+                  <div class="text-box__cont--text">
+                    <div class="align--center" style="display: flex; gap: 12px;">
+                      <p>.algin--center</p>
+                      <p>.algin--center</p>
+                      <p>.algin--center</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico2"></i>
+                <p class="text-box__head--title">bullet</p>
+              </div>
+
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">bullet__list--dash</span></strong>
+                  <ul class="bullet__list--dash">
+                    <li>bulletDsah1</li>
+                    <li>bulletDsah2</li>
+                    <li>bulletDsah3</li>
+                  </ul>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">bullet__list--star</span></strong>
+                  <ul class="bullet__list--star">
+                    <li>bulletStar1</li>
+                    <li>bulletStar2</li>
+                    <li>bulletStar3</li>
+                  </ul>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">bullet__list--ref</span></strong>
+                  <ul class="bullet__list--ref">
+                    <li>bulletRef1</li>
+                    <li>bulletRef2</li>
+                    <li>bulletRef3</li>
+                  </ul>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">bullet__list--num</span></strong>
+                  <ul class="bullet__list--num">
+                    <li><span>1.</span></span>bulletNumber1</li>
+                    <li><span>2.</span></span>bulletNumber2</li>
+                    <li><span>3.</span></span>bulletNumber3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- table guide -->
+          <div class="tab__cont tab2" data-target="tab2">  
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico1"></i>
+                <p class="text-box__head--title">table</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">tableCol (.table--col)</span></strong>
+                  <div class="table__group">
+                    <strong class="table__title">tableTitle</strong>
+                    <!-- 세로 (col) -->
+                    <div class="table__wrap table--col">
+                      <table>
+                        <caption>테이블명</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th socpe="col">thead 제목1</th>
+                                <th socpe="col">thead 제목2</th>
+                                <th socpe="col">thead 제목3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>tbody 내용1</td>
+                                <td>tbody 내용2</td>
+                                <td>tbody 내용3</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">tableRow (.table--row)</span></strong>
+                  <div class="table__group">
+                    <strong class="table__title">tableTitle</strong>
+                    <!-- 가로(row) -->
+                    <div class="table__wrap table--row">
+                        <table>
+                            <caption>테이블명</caption>
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">thead 제목1</th>
+                                    <td>tbody 내용2</td>
+                                    <td>tbody 내용3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">타이틀 텍스트가<br>두줄인경우(강제개행)</th>
+                                    <td>tbody 내용2</td>
+                                    <td>tbody 내용3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+
+                  <!-- table 하단 btn 추가 case -->
+                  <div class="btn__wrap round">
+                    <div class="btn__inner col">
+                      <button class="btn border gray">접수증출력</button>
+                      <button class="btn border gray">목록</button>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">tableMix (.table--mix)</span></strong>
+                  <!-- 혼합 -->
+                  <div class="table__group">
+                    <div class="table__wrap table--mix">
+                        <table>
+                            <caption>테이블명</caption>
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th socpe="col">thead 제목1</th>
+                                    <th socpe="col">thead 제목2</th>
+                                    <th socpe="col">thead 제목3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">thead 제목1</th>
+                                    <td>tbody 내용2</td>
+                                    <td>tbody 내용3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">타이틀 텍스트가<br>두줄인경우(강제개행)</th>
+                                    <td>tbody 내용2</td>
+                                    <td>tbody 내용3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- form(input) item guide -->
+          <div class="tab__cont tab3" data-target="tab3">
+            <!-- form__wrap Mix -->
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <p class="text-box__head--title">form__wrap</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <!-- form wrap -->
+                  <div class="form__wrap">
+
+                    <!-- form group: default -->
+                    <div class="form__group">
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="입력해라" value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="입력해라" value="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- form group: col -->
+                    <div class="form__group row">
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="검색어를 입력하세요" value="">
+                        </div>
+                      </div>
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="검색어를 입력하세요" value="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- form group: col -->
+                    <div class="form__group row">
+                      <div class="select__wrap">
+                        <label class="select__label" for="selectbox1">전체</label>
+                        <select class="select__box" id="selectbox1">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="검색어를 입력하세요" value="">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- form group: col type2 -->
+                    <div class="form__group row2">
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="" value="← option.select__item 스타일 수정 좀 부탁드리옵니다">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- input -->
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <p class="text-box__head--title">input__wrap</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <!-- form wrap -->
+                  <div class="form__wrap">
+
+                    <!-- form group: default -->
+                    <div class="form__group">
+                      <div class="input__wrap">
+                        <div class="input__box">
+                          <input type="text" placeholder="입력해라" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <div class="form__wrap">
+                    <div class="input__wrap input__search">
+                      <div class="input__box">
+                        <input type="text" placeholder="검색어를 입력하세요" value="">
+                      </div>
+                      <button type="button" class="btn__search type2">
+                        검색<i class="ico ico__search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <div class="form__wrap">
+                    <div class="input__wrap input__search">
+                      <div class="input__box">
+                        <input type="text" placeholder="검색어를 입력하세요" value="">
+                      </div>
+                      <button type="button" class="btn__search">
+                        <i class="ico ico__search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- select -->
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <p class="text-box__head--title">select</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">default</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group">
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">col</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group row">
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">col</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group row">
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">col type2</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group row2">
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                      <div class="select__wrap">
+                        <select class="select__box">
+                          <option class="select__item">서울</option>
+                          <option class="select__item">대구</option>
+                          <option class="select__item">대전</option>
+                          <option class="select__item">부산</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- check box -->
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <p class="text-box__head--title">checkBox</p>
+              </div>
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">col</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group">
+                      <div class="checkbox__wrap">
+                        <input type="checkbox" class="checkbox__checkbox" id="checkbox1">
+                        <label class="checkbox__label" for="checkbox1">checkBoxTitle</label>
+                      </div>
+                      <br/>
+                      <div class="checkbox__wrap">
+                        <input type="checkbox" class="checkbox__checkbox" id="checkbox2">
+                        <label class="checkbox__label" for="checkbox2">checkBoxTitle</label>
+                      </div>
+                      <br/>
+                      <div class="checkbox__wrap">
+                        <input type="checkbox" class="checkbox__checkbox" id="checkbox3">
+                        <label class="checkbox__label" for="checkbox3">checkBoxTitle</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">row</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group row">
+                      <div class="checkbox__wrap">
+                        <input type="checkbox" class="checkbox__checkbox" id="checkbox1">
+                        <label class="checkbox__label" for="checkbox1">checkBoxTitle</label>
+                      </div>
+                      <br/>
+                      <div class="checkbox__wrap">
+                        <input type="checkbox" class="checkbox__checkbox" id="checkbox2">
+                        <label class="checkbox__label" for="checkbox2">checkBoxTitle</label>
+                      </div>
+                      <br/>
+                      <div class="checkbox__wrap">
+                        <input type="checkbox" class="checkbox__checkbox" id="checkbox3">
+                        <label class="checkbox__label" for="checkbox3">checkBoxTitle</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- radio seclet -->
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <p class="text-box__head--title">radio</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">col</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group">
+                      <div class="radio__wrap">
+                        <input type="radio" class="radio__btn" id="radio1" name="group1">
+                        <label class="radio__label" for="radio1">radioTitle</label>
+                      </div>
+                      <br/>
+                      <div class="radio__wrap">
+                        <input type="radio" class="radio__btn" id="radio2" name="group1">
+                        <label class="radio__label" for="radio2">radioTitle</label>
+                      </div>
+                      <br/>
+                      <div class="radio__wrap">
+                        <input type="radio" class="radio__btn" id="radio3" name="group1">
+                        <label class="radio__label" for="radio3">radioTitle</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">row</span></strong>
+                  <div class="form__wrap">
+                    <div class="form__group row">
+                      <div class="radio__wrap">
+                        <input type="radio" class="radio__btn" id="radio1" name="group1">
+                        <label class="radio__label" for="radio1">radioTitle</label>
+                      </div>
+                      <br/>
+                      <div class="radio__wrap">
+                        <input type="radio" class="radio__btn" id="radio2" name="group1">
+                        <label class="radio__label" for="radio2">radioTitle</label>
+                      </div>
+                      <br/>
+                      <div class="radio__wrap">
+                        <input type="radio" class="radio__btn" id="radio3" name="group1">
+                        <label class="radio__label" for="radio3">radioTitle</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- button guide -->
+          <div class="tab__cont tab4" data-target="tab4">  
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <!-- <p class="text-box__head--title">round</p> -->
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">round</span></strong>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap round">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn">.btn</button>
+                      <button class="btn gray">.btn.gray</button>
+                      <button class="btn" disabled>.btn(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont square">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">square</span></strong>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap square">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn">.btn</button>
+                      <button class="btn gray">.btn.gray</button>
+                      <button class="btn" disabled>.btn(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">round border</span></strong>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap round">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn border">.btn.border</button>
+                      <button class="btn border gray">.btn.border.gray</button>
+                      <button class="btn border" disabled>.btn.border(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">square border</span></strong>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap square">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn border">.btn.border</button>
+                      <button class="btn border gray">.btn.border.gray</button>
+                      <button class="btn border" disabled>.btn.border(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">뒤로/다음 버튼</span></strong>
+                  <br/>
+                  <div class="btn__wrap">
+                    <div class="btn__inner col">
+                      <button class="btn btn--next">.btn.btn--next</button>
+                      <button class="btn btn--prev">.btn.btn--prev</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">small size(H:default(40) / font-size: 14)</span></strong>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap round sm">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn border">.btn border</button>
+                      <button class="btn border gray">.btn border.gray</button>
+                      <button class="btn border" disabled>.btn border(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap square sm">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn">.btn</button>
+                      <button class="btn gray">.btn.gray</button>
+                      <button class="btn" disabled>.btn(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">x-small size(H:30 / font-size: 14)</span></strong>
+                  <br/>
+                  <!-- button 모양: round / square -->
+                  <div class="btn__wrap square xs">
+                    <!-- button 정렬: col -->
+                    <div class="btn__inner col">
+                      <!-- button 스타일: border gray -->
+                      <button class="btn">.btn</button>
+                      <button class="btn gray">.btn.gray</button>
+                      <button class="btn" disabled>.btn(disabled) 디자인 없음 찾으면 수정해야함</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <!-- <i class="text-box__head--icon ico1"></i> -->
+                <p class="text-box__head--title">단독 버튼</p>
+              </div>
+    
+              <div class="text-box__body">
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">btn__download</span></strong>
+                  <br/>
+
+                  <!-- 다운로드 / edit -->
+                  <div class="btn__wrap">
+                    <div class="btn__inner col">
+                      <button type="button" class="btn__download">고등학교 입학 Off-Line 서식 다운로드</button>
+                      <button type="button" class="btn__edit">고입원서작성(타시도) 바로가기</button>
+                      <button type="button" class="btn__download--blue ">귀국학생 구비서류 안내</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">btn__link</span></strong>
+                  <br/>
+
+                  <!-- link -->
+                  <div class="btn__wrap">
+                    <div class="btn__inner">
+                      <button class="btn__link">평준화배정절차 안내 바로가기</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-box__cont">
+                  <strong class="text-box__cont--title"><span class="highlight--blue">btn__expand</span></strong>
+                  <br/>
+                  <!-- 확대 보기 -->
+                  <div class="btn__wrap">
+                    <div class="btn__inner">
+                      <button class="btn__map-expand">지도 확대보기<i class="ico ico__expand"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- icon guide -->
+          <div class="tab__cont tab5" data-target="tab5">  
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico1"></i>
+                <p class="text-box__head--title">icon</p>
+              </div>
+    
+              <div class="text-box__body">
+              </div>
+            </div>
+          </div>
+          
+          <!-- text-box Case -->
+          <div class="tab__cont tab5" data-target="tab6">  
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico3"></i>
+                <p class="text-box__head--title">text-box List Case</p>
+              </div>
+    
+              <div class="text-box__body list">
+                <ul class="text-box__list">
+                  <li class="text-box__item">
+                    <a href="javascript:;">item</a>
+                  </li>
+                  <li class="text-box__item">
+                    <a href="javascript:;">item</a>
+                  </li>
+                  <li class="text-box__item">
+                    <a href="javascript:;">itemitemitemitemitemitemitemitem</a>
+                  </li>
+                  <li class="text-box__item">
+                    <a href="javascript:;">item</a>
+                  </li>
+                  <li class="text-box__item">
+                    <a href="javascript:;">item</a>
+                  </li>
+                </ul>
+              </div>
+
+
+              <br>
+              <br>
+
+
+              <div class="text-box__body list">
+                <ul class="text-box__list type2">
+                  <li class="text-box__item">
+                    <div class="text-box__item-inner">
+                      컨텐츠
+                    </div>
+                  </li>
+                  <li class="text-box__item item2">
+                    <div class="text-box__item-inner">
+                      컨텐츠 width2X
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+
+              <br>
+              <br>
+              
+
+              <div class="text-box__body list">
+                <ul class="text-box__list type2">
+                  <li class="text-box__item">
+                    <div class="text-box__item-inner">
+                      컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠
+                    </div>
+                  </li>
+                  <li class="text-box__item">
+                    <div class="text-box__item-inner">
+                      컨텐츠
+                    </div>
+                  </li>
+                  <li class="text-box__item">
+                    <div class="text-box__item-inner">
+                      컨텐츠
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="text-box__wrap">
+              <div class="text-box__head">
+                <i class="text-box__head--icon ico3"></i>
+                <p class="text-box__head--title">text-box Step Case</p>
+              </div>
+    
+              <div class="text-box__body--step">
+                <ul class="text-box__step">
+                  <li class="text-box__item">
+                    <i class="ico1"></i>원서작성
+                  </li>
+                  <li class="text-box__item">
+                    <i class="ico2"></i><span class="highlight--blue">원서제출</span>
+                  </li>
+                  <li class="text-box__item">
+                    <i class="ico3"></i><span class="highlight--blue">원서접수</span>
+                  </li>
+                  <!-- [Dev] 완료시 ready class 삭제 -->
+                  <li class="text-box__item ready">
+                    <i class="ico4"></i>합격발표 (예정)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // CASE1: contents tab -->
+      
+
+        
+        <!-- CASE2: contents page -->
+        <div class="page__contents">
+
+        </div>
+        <!-- // CASE2: contents page -->
+      </div>
+    </section>
+
+    
+  </div>
+
+  
+</main>
+<!-- // Contents -->
+
+
+
+
+
+<!-- footer -->
+<footer class="footer__wrap">
+  <div class="footer__top">
+    <div class="footer__inner">
+      <div class="footer__policy">
+        <ul class="policy__list">
+          <li class="policy__item"><a href="javascript:;">개인정보처리방침</a></li>
+          <li class="policy__item"><a href="javascript:;">전화번호안내</a></li>
+          <li class="policy__item"><a href="javascript:;">홈페이지이용약관</a></li>
+          <li class="policy__item"><a href="javascript:;">이메일 무단수집거부</a></li>
+          <li class="policy__item"><a href="javascript:;">저작권안내</a></li>
+          <li class="policy__item"><a href="javascript:;">원격지원</a></li>
+        </ul>
+        <div class="footer__site-map">
+          <button type="button" class="site-map__btn">
+            관련사이트 바로가기
+            <i class="ico ico__arr-up--white"></i>
+          </button>
+          <ul class="site-map__list">
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option01</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option02</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option03</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option04</a></li>
+            <li class="site-map__item"><a href="#" target="_blank" title="새창열림">option05</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__inner">
+      <h2 class="footer__logo"><a href="#"><img src="../../static/images/common/img_footer_logo.png" alt="전라북도교육청 logo"></a></h2>
+      <div class="footer__copy">
+        <div class="copy__title">전라북도교육청 고등학교입학전형포털</div>
+        <ul class="copy__list">
+          <li class="copy__item">(55065) 전라북도 전주시 완산구 홍산로 111 전라북도교육청</li>
+          <li class="copy__item">TEL. 063)239-3339</li>
+          <li class="copy__item">FAX. 063)220-9407</li>
+        </ul>
+        <strong class="copy__copyright">
+          COPYRIGHT(C)2023.JEOLLABUKDO OFFICE OF EDUCATION. ALL RIGHTS RESERVED.
+        </strong>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- // footer -->
+</div>
+</body>
+</html>

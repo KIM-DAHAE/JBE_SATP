@@ -1,0 +1,98 @@
+@import "_color.scss";
+// 작업자들 개별 작업용 scss
+// 작업자 늘어나면 style0n.scss 로 style file 추가 사용 가능
+
+
+// 한문이 공백으로 나올때 글씨체 변경
+// .hanwen {
+//   font-family: 'default';
+// }
+
+.text-box{
+
+  &__cont {
+    &--title {
+      & + .table__wrap {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+
+
+
+// tablet
+@media screen and (min-width: 641px) and (max-width: 1919px){
+
+  .text-box{
+
+    &__cont {
+      &--title {
+        & + .table__wrap {
+          margin-top: vw-pc(15);
+        }
+      }
+    }
+  } 
+
+
+} // tablet 끝
+
+
+
+
+// mobile
+@media screen and (max-width: 640px) {
+
+  .text-box{
+
+    &__cont {
+      &--title {
+        & + .table__wrap {
+          margin-top: vw-mo(15);
+        }
+      }
+    }
+  }
+
+  .bullet {
+    &__list {
+  
+      &--dash, 
+      &--num {
+        margin-top: vw-mo(8);
+  
+      }
+    }
+  } 
+
+  .table__wrap{
+    font-size: vw-mo(20);
+  }
+
+  // 전편입학 페이지만 적용
+  .transfer-school {
+
+    .side-pd0 {
+      th {
+        padding: vw-mo(20 0);
+      }
+
+      td {
+        padding: vw-mo(18 0); 
+      }
+    }
+  }
+
+  // 평준화배정 안내 페이지에서만 적용
+  .assign-guide {
+    .align {
+      &--center {
+        justify-content: left;
+      }
+    }
+  }
+
+
+} // mobile 끝

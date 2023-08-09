@@ -1,0 +1,694 @@
+@import "_color.scss";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: auto;
+  min-width: 82px;
+  height: 40px;
+  padding: 0 20px;
+  color: $white;
+  background: $primary;
+  font-size: 17px;
+  line-height: 1;
+
+
+  &__wrap {
+    // 모양
+    &.round {
+      .btn {
+        border-radius: 40px;
+
+        &.gray {
+          color: $black;
+          background: #dfdfdf;
+        }
+
+        &.border {
+          color: $primary;
+          border: 1px solid $primary;
+          border-radius: 40px;
+          background: $white;
+
+          &.gray {
+            color: #858585;
+            border: 1px solid #858585;
+            background: $white;
+          }
+        }
+      }
+    }
+    &.square {
+      .btn {
+        border-radius: 4px;
+        background: $primary;
+        
+        &.gray {
+          color: $black;
+          background: #dfdfdf;
+        }
+
+        &.border {
+          color: $primary;
+          border: 1px solid $primary;
+          background: $white;
+          &.gray {
+            color: #858585;
+            border: 1px solid #858585;
+            background: $white;
+          }
+        }
+      }
+    }
+    &.sm {
+      .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+    }
+    &.xs {
+      .btn {
+        height: 30px;
+        padding: 0 18px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    // 정렬
+    &.col {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &--confirm {
+    overflow: hidden;
+    color: $white;
+    border: 1px solid $primary;
+    border-radius: 40px;
+    background: $primary;
+
+    &.gray {
+      color: $white;
+      background: #858585;
+    }
+  }  
+  &.btn--next,
+  &.btn--prev{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 40px;
+    background: $white;
+    &:before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 12px;
+      background-image: url('../images/icon/ico_arrow_right_blue.svg');
+      background-size: cover;
+    }
+  }
+  &.btn--next {
+    flex-direction: row-reverse;
+    box-shadow: 0px 3px 6px 0px rgba(0, 100, 203, 0.18);
+    font-weight: 700;
+  }
+  &.btn--prev {
+    color: #858585;
+    border: 1px solid #858585;
+    &:before {
+      transform: rotate(-180deg);
+      background-image: url('../images/icon/ico_arrow_right_gray.svg');
+      background-size: cover;
+    }
+  }
+
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 60px;
+    height: 40px;
+    padding: 0 20px;
+    color: $primary;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid $primary;
+    border-radius: 40px;
+    &:after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 10px;
+      background: url('../images/icon/ico_arrow_right_blue.svg') 0% / cover;
+    }
+
+    &--text {
+      &:active,
+      &:hover {
+        text-decoration: underline;
+        color: $primary;
+      }
+    }
+  }
+
+  // 다운로드
+  &__download {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 40px;
+    padding: 8px 16px 8px 20px;
+    color: $white;
+    // font-size: 14px;
+    background: #313131;
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url('../images/icon/ico_download.png') no-repeat 0% / 100%;
+    }
+
+    &--blue {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      height: 40px;
+      padding: 0 16px 0 20px;
+      color: $primary;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 40px;
+      border: 1px solid $primary;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url('../images/icon/ico_download_blue.png') no-repeat 0% / 100%;
+      }
+    }
+  }
+  
+  // 연필
+  &__edit {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    // height: 40px;
+    padding: 8px 16px 8px 20px;
+    color: $white;
+    background: #313131;
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url('../images/icon/ico_edit.png') no-repeat 0% / 100%;
+    }
+  }
+
+  // 공유하기
+  &-sns {
+    &:before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(../images/icon/ico_share.png) no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  // 인쇄
+  &-print {
+    &:before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(../images/icon/ico_print.png) no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &-home {
+    display: block;
+    position: relative;
+    width: 60px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url('../images/icon/ico_home.svg') no-repeat center;
+      background-size: 19px auto;
+    }
+  }
+
+  // 좌우 이동 버튼
+  &-right,
+  &-left {
+    position: relative;
+    width: 25px;
+    min-width: auto;
+    height: 25px;
+    padding: 0;
+    background: #dfdfdf;
+    border-radius: 4px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: calc((100% - 8px) / 2);
+      top: calc((100% - 12px) / 2);;
+      width: 8px;
+      height: 12px;
+      background: url(../images/icon/ico_arrow_dark_gray.svg) no-repeat center / 100%;
+    }
+  }
+
+  &-left {
+    &:before {
+      transform: scaleX(-1);
+    }
+  }
+  
+  &__map-expand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    height: 40px;
+    padding: 10px 12px;
+    color: #858585;
+    border-radius: 4px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0px 3px 6px 0px rgba(84, 86, 88, 0.18);
+  }
+}
+
+
+
+// tablet
+@media screen and (min-width: 641px) and (max-width: 1919px){
+	.btn {
+    gap: vw-pc(6);
+    min-width: 36px;
+    height: vw-pc(40);
+    min-height: 24px;
+    padding: 0 vw-pc(20);
+    font-size: vw-pc(17);
+		&__wrap {
+			&.col2 {
+				gap: vw-pc(10);
+			}
+		}
+
+    
+    &__wrap {
+      // 모양
+      &.round {
+        .btn {
+          border-radius: vw-pc(40);
+
+          &.gray {
+          }
+
+          &.border {
+            border-radius: vw-pc(40);
+            &.gray {
+            }
+          }
+        }
+      }
+      &.square {
+        .btn {
+          &.gray {
+          }
+
+          &.border {
+            &.gray {
+            }
+          }
+        }
+      }
+      &.sm {
+        .btn {
+          padding: vw-pc(12 20);
+          font-size: vw-pc(14);
+        }
+      }
+      &.xs {
+        .btn {
+          height: vw-pc(30);
+          min-height: 16px;
+          padding: 0 vw-pc(18);
+          font-size: vw-pc(14);
+        }
+      }
+    }
+
+    &__inner {
+      display: flex;
+      // 정렬
+      &.col {
+        display: flex;
+        align-items: center;
+        gap: vw-pc(15);
+      }
+    }
+    
+    &.btn--next,
+    &.btn--prev{
+      gap: vw-pc(12);
+      border-radius: vw-pc(40);
+      &:before {
+        width: vw-pc(6);
+        height: vw-pc(12);
+      }
+    }
+    &.btn--next {
+      // font-size: vw-pc(14);
+    }
+    &.btn--prev {
+      &:before {
+        width: vw-pc(6);
+        height: vw-pc(12);
+      }
+    }
+
+    // 링크
+    &__link {
+      display: flex;
+      padding: 0 20px;
+      border: 1px solid $primary;
+      border-radius: 40px;
+      gap: vw-pc(10);
+      height: vw-pc(40);
+      font-size: vw-pc(14);
+    }
+
+		// 다운로드 아이콘
+		&__download {
+			gap: vw-pc(11);
+			min-height: 32px;
+			padding: vw-pc(8 16 8 20);
+      font-size: vw-pc(14);
+			&:after {
+				width: vw-pc(20);
+				min-width: 12px;
+				height: vw-pc(20);
+				min-height: 12px;
+			}
+
+      &--blue {
+        gap: vw-pc(11);
+        min-height: 32px;
+        padding: vw-pc(8 16 8 20);
+        font-size: vw-pc(14);
+
+        &:after {
+          width: vw-pc(20);
+          height: vw-pc(20);
+        }
+      }
+		}
+		
+		// 연필 아이콘
+		&__edit {
+			gap: vw-pc(11);
+      min-height: 32px;
+      padding: vw-pc(8 16 8 20);
+      font-size: vw-pc(14);
+			&:after {
+				width: vw-pc(20);
+				height: vw-pc(20);
+			}
+		}
+	
+		// 공유하기 아이콘
+		&-sns {
+			&:before {
+				width: vw-pc(24);
+				height: vw-pc(24);
+			}
+		}
+	
+		// 인쇄 아이콘
+		&-print {
+			&:before {
+				width: vw-pc(24);
+				height: vw-pc(24);
+			}
+		}
+	
+		&-home {
+			width: vw-pc(60);
+	
+			&:after {
+				width: vw-pc(60);
+				height: vw-pc(60);
+				background-size: vw-pc(19 auto);
+			}
+		}
+    // 좌우 이동 버튼
+    &-right,
+    &-left {
+      width: vw-pc(25);
+      min-width: auto;
+      height: vw-pc(25);
+      padding: 0;
+      border-radius: vw-pc(4);
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: calc((100% - #{vw-pc(8)}) / 2);
+        top: calc((100% - #{vw-pc(12)}) / 2);;
+        width: vw-pc(8);
+        height: vw-pc(12);
+      }
+    }
+    
+    &__map-expand {
+      gap: vw-pc(11);
+      height: vw-pc(40);
+      padding: vw-pc(10 12);
+    }
+	}
+}
+
+
+
+// mobile
+@media screen and (max-width: 640px) {
+	.btn {
+    justify-content: center;
+    min-width: vw-mo(160);
+    height: vw-mo(70);
+    padding: 0;
+    font-size: vw-mo(26);
+    text-align: center;
+    
+    &__wrap {
+			&.col {
+				gap: vw-mo(10);
+			}
+      // 모양
+      &.round {
+        .btn {
+          width: 100%;
+          font-size: vw-mo(22);
+          font-weight: 700;
+          border-radius: vw-mo(40);
+
+          &.gray {
+          }
+
+          &.border {
+            border-radius: vw-mo(40);
+            &.gray {
+            }
+          }
+        }
+      }
+      &.square {
+        .btn {
+          border-radius: vw-mo(8);
+          &.gray {
+          }
+
+          &.border {
+            &.gray {
+            }
+          }
+        }
+      }
+      &.sm {
+        .btn {
+          height: vw-mo(30);
+          padding: vw-mo(12 20);
+          font-size: vw-mo(14);
+          font-weight: 400;
+        }
+      }
+      &.xs {
+        .btn {
+          min-width: vw-mo(103);
+          height: vw-mo(45);
+          padding: vw-mo(0 20);
+          font-size: vw-mo(18);
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__inner {
+      display: flex;
+      // 정렬
+      &.col {
+        display: flex;
+        align-items: center;
+        gap: vw-pc(15);
+      }
+    }
+    
+    &.btn--next,
+    &.btn--prev{
+      position: relative;
+      // padding-right: vw-mo(32);
+      width: 100%;
+      border-radius: vw-mo(40);
+      font-size: vw-mo(26);
+      &:before {
+        position: absolute;
+        width: vw-mo(11);
+        height: vw-mo(20);
+        margin-left: auto;
+      }
+    }
+    &.btn--next {
+      &:before {
+        right: vw-mo(32);
+      }
+    }
+    &.btn--prev {
+      &:before {
+        left: vw-mo(32);
+      }
+    }
+
+    &__link {
+      gap: vw-mo(10);
+      height: vw-mo(40);
+      font-size: vw-mo(14);
+    }
+
+		// 다운로드 아이콘
+		&__download {
+      justify-content: space-between;
+			gap: vw-mo(20);
+      width: vw-mo(370);
+			min-height: vw-mo(60);
+			padding: 0 vw-mo(16) 0 vw-mo(20);
+      font-size: vw-mo(18);
+			&:after {
+				width: vw-mo(24);
+				height: vw-mo(24);
+			}
+
+      &--blue {
+        height: vw-mo(45);
+        font-size: vw-mo(20);
+
+        &:after {
+          width: vw-mo(24);
+          height: vw-mo(24);
+        }
+      }
+		}
+		
+		// 연필 아이콘
+		&__edit {
+      justify-content: space-between;
+			gap: vw-mo(20);
+      width: vw-mo(370);
+			height: vw-mo(60);
+			padding: 0 vw-mo(16) 0 vw-mo(20);
+      font-size: vw-mo(18);
+			&:after {
+				width: vw-mo(20);
+				height: vw-mo(20);
+			}
+		}
+	
+		// 공유하기 아이콘
+		&-sns {
+			&:before {
+				width: vw-mo(68);
+				height: vw-mo(60);
+        background-size: vw-mo(29 29);
+			}
+		}
+	
+		// 인쇄 아이콘
+		&-print {
+			display: none;
+
+			&:before {
+				width: vw-mo(24);
+				height: vw-mo(24);
+			}
+		}
+	
+		&-home {
+			width: vw-mo(60);
+	
+			&:after {
+				width: vw-mo(60);
+				height: vw-mo(60);
+				background-size: vw-mo(19 auto);
+			}
+		}
+
+    // 좌우 이동 버튼
+    &-right,
+    &-left {
+      width: vw-mo(35);
+      min-width: auto;
+      height: vw-mo(35);
+      padding: 0;
+      border-radius: vw-mo(4);
+
+      &:before {
+        left: calc((100% - #{vw-mo(8)}) / 2);
+        top: calc((100% - #{vw-mo(12)}) / 2);;
+        width: vw-mo(8);
+        height: vw-mo(12);
+      }
+    }
+
+    &__map-expand {
+      gap: vw-mo(11);
+      height: vw-mo(40);
+      padding: vw-mo(10 12);
+      font-size: vw-mo(18);
+    }
+	}
+}
